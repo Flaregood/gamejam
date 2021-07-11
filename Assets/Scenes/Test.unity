@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 388007029}
   - component: {fileID: 388007028}
   - component: {fileID: 388007032}
+  - component: {fileID: 388007033}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -231,11 +232,24 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &388007033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388007027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d481f2f281a1c07408e93f07062f4af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability: {fileID: 11400000, guid: 1cd054f31e8ebaa4993a8e54ce6d1eac, type: 2}
 --- !u!1 &1894370261
 GameObject:
   m_ObjectHideFlags: 0
