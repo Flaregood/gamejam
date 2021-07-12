@@ -17,6 +17,7 @@ public class BoomerangAbility : Ability
             GameObject newProjectile = Instantiate(original: projectile, position: parent.transform.position, rotation: projectileRotation, parent: parent.transform);
 
             newProjectile.GetComponent<Rigidbody2D>().velocity = newProjectile.transform.right * speed;
+            newProjectile.GetComponent<BoomerangProjectileMovement>().attackerTag = parent.tag;
         }
     }
 

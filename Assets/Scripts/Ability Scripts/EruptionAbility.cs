@@ -13,7 +13,9 @@ public class EruptionAbility : Ability
         for (int i = 0; i < amountProjectiles; i++)
         {
             Quaternion projectileRotation = Quaternion.Euler(0, 0, (360f / amountProjectiles) * i); //Assign portion of 360° (circle) rotation for projectile
-            Instantiate(original: projectile, position: parent.transform.position, rotation: projectileRotation);
+            GameObject newProjectile = Instantiate(original: projectile, position: parent.transform.position, rotation: projectileRotation);
+            newProjectile.GetComponent<EruptionProjectileMovement>().centerPoint = parent.transform.position;
+            newProjectile.GetComponent<EruptionProjectileMovement>().attackerTag = parent.tag;
         }
     }
 
