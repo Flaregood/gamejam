@@ -18,7 +18,7 @@ public class AbilityHandler : MonoBehaviour
 
     private void handleReady()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && transform.tag == "Player")
         {
             // Call activate from the Ability template class, set ability state to active.
             ability.Activate(gameObject); // call Activate on the object the ability handler script is on.
