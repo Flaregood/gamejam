@@ -13,7 +13,7 @@ public class EruptionProjectileMovement : MonoBehaviour
 
     private void Awake()
     {
-        centerPoint = GameObject.Find("player").transform.position;
+        centerPoint = GameObject.Find("Player").transform.position;
     }
 
     void FixedUpdate()
