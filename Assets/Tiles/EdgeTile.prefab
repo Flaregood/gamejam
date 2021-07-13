@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1219179508917266089}
   - component: {fileID: 6486716161167727747}
-  - component: {fileID: -5596909360489642092}
+  - component: {fileID: -8642001267216864241}
   m_Layer: 0
   m_Name: EdgeTile
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-5596909360489642092
+--- !u!61 &-8642001267216864241
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
