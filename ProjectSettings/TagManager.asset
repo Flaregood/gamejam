@@ -42,17 +42,17 @@ TagManager:
   -
   m_SortingLayers:
   - name: Background
-    uniqueID: 4001550453
+    uniqueID: 2174898675
     locked: 0
   - name: Map
-    uniqueID: 1398893953
+    uniqueID: 4077039081
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: PlayArea
-    uniqueID: 3868276631
+    uniqueID: 3338712551
     locked: 0
   - name: Foreground
-    uniqueID: 3612873677
+    uniqueID: 304264949
     locked: 0
