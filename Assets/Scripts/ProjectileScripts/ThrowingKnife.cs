@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ThrowingKnife : MonoBehaviour
 {
+    [SerializeField] private int damage;
     [SerializeField] private float speed;
     private Rigidbody2D rb;
 
@@ -11,5 +12,15 @@ public class ThrowingKnife : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }

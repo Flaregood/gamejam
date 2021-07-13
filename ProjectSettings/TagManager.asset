@@ -4,41 +4,55 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Projectile
+  - Enemy
+  - WeaponPickup
+  - AbilityPickup
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Foreground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4001550453
+    locked: 0
+  - name: Map
+    uniqueID: 1398893953
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PlayArea
+    uniqueID: 3868276631
+    locked: 0
+  - name: Foreground
+    uniqueID: 3612873677
     locked: 0

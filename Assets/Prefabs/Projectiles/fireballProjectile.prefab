@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4307245316173088239}
   - component: {fileID: -218053506962690501}
   - component: {fileID: 6511698349101004849}
+  - component: {fileID: 1829406864581201855}
   m_Layer: 0
   m_Name: fireballProjectile
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -426690665
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0def8f9f15ea2b5409c31d7fa1e677bc, type: 3}
   m_Color: {r: 1, g: 0.4764151, b: 0.4764151, a: 1}
@@ -116,7 +117,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 934e807a75a476444b8a7f7f6e2edbfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceSpeed: 500
+  m_Name:
+  m_EditorClassIdentifier:
+  damage: 5
+  distanceSpeed: 200
   spinningSpeed: 200
+--- !u!61 &1829406864581201855
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242213785938702123}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 11.56, y: 8.08}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 11.56, y: 8.08}
+  m_EdgeRadius: 0
