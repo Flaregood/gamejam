@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54adbdc9591a504db0b13ff410221c1, type: 3}
-  m_Name: Boomerang  Ninja Star
+  m_Script: {fileID: 11500000, guid: 236e85bead113544485042cb371b686c, type: 3}
+  m_Name: Shoot Magic Ball Ability
   m_EditorClassIdentifier: 
   name: 
   cooldownTime: 0
   activeTime: 0
-  projectile: {fileID: 4242213785938702123, guid: e1394d2e6bc41a44590fabcfdbdd5e68, type: 3}
-  distance: 10
-  spinSpeed: 1
+  projectile: {fileID: 4242213785938702123, guid: 53036e4fe4a64434cbe2ffa8f033d067, type: 3}
+  distance: 0
+  spinSpeed: 0
   amountProjectiles: 8

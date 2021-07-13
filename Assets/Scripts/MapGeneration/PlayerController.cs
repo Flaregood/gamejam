@@ -31,15 +31,6 @@ public class PlayerController : MonoBehaviour
     {
         //body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
         //transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, transform.position.y) + new Vector2(horizontal * runSpeed, vertical * runSpeed), runSpeed * Time.fixedDeltaTime);
-
-        Vector3 startPos = new Vector3(transform.position.x, transform.position.y, 10) + new Vector3(horizontal * runSpeed, vertical * runSpeed, 0) * 0.1f;
-        Vector3 targetPos = new Vector3(transform.position.x, transform.position.y, -10) + new Vector3(horizontal * runSpeed, vertical * runSpeed, 0) * 0.1f;
-        Debug.Log(targetPos);
-
-        if (!Physics2D.Linecast(startPos, targetPos))
-        {
-            Debug.Log("blocked");
-            transform.Translate(new Vector2(horizontal * runSpeed, vertical * runSpeed) * Time.fixedDeltaTime);
-        }
+        transform.Translate(new Vector2(horizontal * runSpeed, vertical * runSpeed) * Time.fixedDeltaTime);
     }
 }

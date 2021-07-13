@@ -15,5 +15,5 @@ MonoBehaviour:
   name: 
   cooldownTime: 0
   activeTime: 0
-  projectile: {fileID: 4242213785938702123, guid: 179d81195cd013c429280a326e628e68, type: 3}
+  projectile: {fileID: 4242213785938702123, guid: c3cecfb6f3e8e5a42bb65c58e4c0da7f, type: 3}
   amountProjectiles: 8
