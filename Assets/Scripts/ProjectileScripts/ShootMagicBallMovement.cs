@@ -2,30 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoomerangProjectileMovement : MonoBehaviour
+public class ShootMagicBallMovement : MonoBehaviour
 {
-
-    private GameObject player;
+    public Vector2 centerPoint;
 
     [SerializeField] private int damage;
-    [SerializeField] public float distance_Speed;
+    [SerializeField] private float movingSpeed;
+    [SerializeField] public float distanceSpeed;
     [SerializeField] public float spinningSpeed;
     public string attackerTag;
 
     private void Awake()
     {
-        player = GameObject.Find("Player");
+        centerPoint = GameObject.Find("Player").transform.position;
     }
 
     void FixedUpdate()
     {
-        transform.Rotate(0, 0, spinningSpeed*360 * Time.fixedDeltaTime);
-        transform.Translate(Vector3.right* Time.fixedDeltaTime* (distance_Speed*spinningSpeed));
+        transform.RotateAround(point: centerPoint, axis: -Vector3.forward, angle: spinningSpeed * Time.fixedDeltaTime);
+        GetComponent<Rigidbody2D>().velocity = (transform.right + transform.up) * distanceSpeed * Time.fixedDeltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(attackerTag == "Player")
+        if (attackerTag == "Player")
         {
             if (collision.gameObject.tag == "Enemy")
             {
@@ -37,7 +37,8 @@ public class BoomerangProjectileMovement : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                //collision.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
+                //TODO: Build in Player Health
+                //collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
                 //Destroy(gameObject);
             }
         }

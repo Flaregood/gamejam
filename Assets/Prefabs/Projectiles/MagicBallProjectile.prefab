@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5700408535812055462}
   - component: {fileID: 4307245316173088239}
-  - component: {fileID: 6511698349101004849}
   - component: {fileID: 1829406864581201855}
   - component: {fileID: 805068000665233476}
+  - component: {fileID: 6511698349101004849}
+  - component: {fileID: -1542160376329974331}
   m_Layer: 0
-  m_Name: fireballProjectile
+  m_Name: MagicBallProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0def8f9f15ea2b5409c31d7fa1e677bc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.5030503, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,23 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6511698349101004849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4242213785938702123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934e807a75a476444b8a7f7f6e2edbfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerPoint: {x: 0, y: 0}
-  damage: 5
-  distanceSpeed: 200
-  spinningSpeed: 200
-  attackerTag: 
 --- !u!61 &1829406864581201855
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,3 +134,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &6511698349101004849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242213785938702123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934e807a75a476444b8a7f7f6e2edbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerPoint: {x: 0, y: 0}
+  damage: 5
+  distanceSpeed: 200
+  spinningSpeed: 200
+  attackerTag: 
+--- !u!114 &-1542160376329974331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242213785938702123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de6042e6adb05e4b8eb11a287b6b5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerPoint: {x: 0, y: 0}
+  damage: 5
+  distanceSpeed: 10
+  spinningSpeed: 200
+  attackerTag: 
