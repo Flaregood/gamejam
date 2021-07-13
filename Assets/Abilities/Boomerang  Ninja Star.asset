@@ -15,6 +15,7 @@ MonoBehaviour:
   name: 
   cooldownTime: 0
   activeTime: 0
-  projectile: {fileID: 4242213785938702123, guid: e9c87051b58235c43bec6d5199fec3bb, type: 3}
-  speed: 15
-  amountProjectiles: 16
+  projectile: {fileID: 4242213785938702123, guid: e1394d2e6bc41a44590fabcfdbdd5e68, type: 3}
+  distance: 10
+  spinSpeed: 1
+  amountProjectiles: 250

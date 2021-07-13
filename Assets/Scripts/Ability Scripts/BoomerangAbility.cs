@@ -6,7 +6,8 @@ using UnityEngine;
 public class BoomerangAbility : Ability
 {
     [SerializeField] private GameObject projectile;
-    [SerializeField] private float speed;
+    [SerializeField] private float distance;
+    [SerializeField] private float spinSpeed;
     [SerializeField] private int amountProjectiles;
 
     public override void Activate(GameObject parent)
@@ -15,8 +16,8 @@ public class BoomerangAbility : Ability
         {
             Quaternion projectileRotation = Quaternion.Euler(0, 0, (360f / amountProjectiles) * i); //Assign portion of 360° (circle) rotation for projectile
             GameObject newProjectile = Instantiate(original: projectile, position: parent.transform.position, rotation: projectileRotation, parent: parent.transform);
-
-            newProjectile.GetComponent<Rigidbody2D>().velocity = newProjectile.transform.right * speed;
+            newProjectile.GetComponent<BoomerangProjectileMovement>().distance_Speed = this.distance;
+            newProjectile.GetComponent<BoomerangProjectileMovement>().spinningSpeed = this.spinSpeed;
         }
     }
 
