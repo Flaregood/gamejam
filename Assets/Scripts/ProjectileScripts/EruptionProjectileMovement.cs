@@ -36,8 +36,9 @@ public class EruptionProjectileMovement : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
-                Destroy(gameObject);
+                //TODO: Build in Player Health
+                //collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+                //Destroy(gameObject);
             }
         }
     }

@@ -78,6 +78,6 @@ public class EnemyController : MonoBehaviour
 
     public void FollowPlayer()
     {
-        transform.position = Vector3.Lerp(transform.position, PlayerController.instance.transform.position, speed * Time.fixedDeltaTime);
+        transform.Translate((PlayerController.instance.transform.position - transform.position) * Time.fixedDeltaTime);
     }
 }

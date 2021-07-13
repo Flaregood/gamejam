@@ -17,12 +17,14 @@ public class BoomerangProjectileMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log(player.transform.TransformPoint(Vector3.zero));
+
         transform.RotateAround(point: player.transform.position, axis: -transform.forward, angle: speed * Time.fixedDeltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (attackerTag == "Player")
+        if(attackerTag == "Player")
         {
             if (collision.gameObject.tag == "Enemy")
             {
