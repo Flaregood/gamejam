@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 517733c4a8899d945842b0a3369d13ee, type: 3}
-  m_Name: Eruption
+  m_Script: {fileID: 11500000, guid: 236e85bead113544485042cb371b686c, type: 3}
+  m_Name: Enemy_MagicBalls
   m_EditorClassIdentifier: 
   name: 
   cooldownTime: 0
   activeTime: 0
-  activeProjectileTime: 5
-  projectile: {fileID: 4242213785938702123, guid: c3cecfb6f3e8e5a42bb65c58e4c0da7f, type: 3}
-  distanceSpeed: 0
-  spinSpeed: 0
+  activeProjectileTime: 2
+  projectile: {fileID: 4242213785938702123, guid: 53036e4fe4a64434cbe2ffa8f033d067, type: 3}
+  movingSpeed: 5
+  distanceSpeed: 1
+  spinSpeed: 200
   amountProjectiles: 8
   damage: 15
