@@ -18,7 +18,7 @@ MonoBehaviour:
   icon: {fileID: 0}
   activeProjectileTime: 5
   projectile: {fileID: 4242213785938702123, guid: c3cecfb6f3e8e5a42bb65c58e4c0da7f, type: 3}
-  distanceSpeed: 0
-  spinSpeed: 0
+  distanceSpeed: 100
+  spinSpeed: 200
   amountProjectiles: 8
   damage: 15

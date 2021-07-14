@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf8087dcab79cd43a7f37916d8c5d26, type: 3}
+  m_Name: Shield
+  m_EditorClassIdentifier: 
+  name: 
+  cooldownTime: 200
+  activeTime: 150
+  activeProjectileTime: 0
+  shield: {fileID: 3427065123040112553, guid: 73b79d4ee708705418db53b97bfd0a23, type: 3}
+  shieldHealth: 100

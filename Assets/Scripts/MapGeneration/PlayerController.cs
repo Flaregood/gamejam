@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     Rigidbody2D body;
 
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private int health;
+
     float horizontal;
     float vertical;
 
@@ -18,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         instance = this;
         body = GetComponent<Rigidbody2D>();
+        healthBar.SetMaxHealth(health);
     }
 
     // Update is called once per frame
@@ -32,5 +36,17 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
         //transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, transform.position.y) + new Vector2(horizontal * runSpeed, vertical * runSpeed), runSpeed * Time.fixedDeltaTime);
         //transform.Translate(new Vector2(horizontal * runSpeed, vertical * runSpeed) * Time.fixedDeltaTime);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        healthBar.SetHealth(health);
+
+        if (health <= 0)
+        {
+            //TODO: Play death animation in here
+            gameObject.SetActive(false);
+        }
     }
 }
