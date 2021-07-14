@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponHandler : MonoBehaviour
 {
     public Weapon weapon;
+
+    public Image weaponIndicator; 
     [SerializeField] private GameObject firePoint;
 
     private float timeBetweenAttacks;

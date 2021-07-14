@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 6380630465215778805}
   - component: {fileID: 6380630465215778803}
   - component: {fileID: 1099897383}
+  - component: {fileID: 1099897390}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -168,8 +169,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -426690665
-  m_SortingLayer: 0
+  m_SortingLayerID: -956254745
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e55dba30e9171b64dabd7d732769b1cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -242,6 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: 3029f3da6acbd8a4f85348f1e8693b16, type: 2}
+  abilityIndicator: {fileID: 0}
+  cooldownIndicator: {fileID: 0}
 --- !u!114 &6380630465215778805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 719ae404d85535a4d98978da2ca6295d, type: 2}
+  weaponIndicator: {fileID: 0}
   firePoint: {fileID: 6380630465206929205}
 --- !u!114 &6380630465215778803
 MonoBehaviour:
@@ -281,3 +285,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 10
+--- !u!114 &1099897390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6380630465215778810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d5f910d53b44c4aae58988eec1e096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

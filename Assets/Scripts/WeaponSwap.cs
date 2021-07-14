@@ -20,6 +20,7 @@ public class WeaponSwap : MonoBehaviour
         {
            activeWeapon =  other.gameObject.GetComponent<WeaponPickupEntity>().GetStoredWeapon();
            weaponHandler.weapon = activeWeapon;
+           weaponHandler.weaponIndicator.sprite = activeWeapon.icon;
             // kabooom 💥
            Destroy(other.gameObject);
         }
