@@ -15,8 +15,10 @@ MonoBehaviour:
   name: Blades
   cooldownTime: 0
   activeTime: 0
+  activeProjectileTime: 5
   icon: {fileID: 21300000, guid: 18b3861af02da184aa9c30d9af2fae1f, type: 3}
   projectile: {fileID: 4242213785938702123, guid: e1394d2e6bc41a44590fabcfdbdd5e68, type: 3}
-  distance: 10
+  distanceSpeed: 0
   spinSpeed: 1
   amountProjectiles: 8
+  damage: 15

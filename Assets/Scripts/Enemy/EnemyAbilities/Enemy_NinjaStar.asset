@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 517733c4a8899d945842b0a3369d13ee, type: 3}
-  m_Name: Eruption
+  m_Script: {fileID: 11500000, guid: d54adbdc9591a504db0b13ff410221c1, type: 3}
+  m_Name: Enemy_NinjaStar
   m_EditorClassIdentifier: 
   name: 
   cooldownTime: 0
   activeTime: 0
-  activeProjectileTime: 5
-  projectile: {fileID: 4242213785938702123, guid: c3cecfb6f3e8e5a42bb65c58e4c0da7f, type: 3}
+  activeProjectileTime: 0
+  projectile: {fileID: 4242213785938702123, guid: e1394d2e6bc41a44590fabcfdbdd5e68, type: 3}
   distanceSpeed: 0
-  spinSpeed: 0
+  spinSpeed: 1
   amountProjectiles: 8
   damage: 15
