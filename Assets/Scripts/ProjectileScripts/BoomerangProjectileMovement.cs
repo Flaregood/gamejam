@@ -14,7 +14,7 @@ public class BoomerangProjectileMovement : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("player");
+        player = GameObject.Find("Player");
     }
 
     void FixedUpdate()
@@ -25,7 +25,7 @@ public class BoomerangProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(attackerTag == "player")
+        if(attackerTag == "Player")
         {
             if (collision.gameObject.tag == "Enemy")
             {
