@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - WeaponPickup
   - AbilityPickup
+  - Projectile
   layers:
   - Default
   - TransparentFX

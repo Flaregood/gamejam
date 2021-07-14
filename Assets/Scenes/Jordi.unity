@@ -490,6 +490,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponPickup
       objectReference: {fileID: 0}
+    - target: {fileID: 3152972274789222494, guid: 8391d7bccb0b6b440b12939ac28b4561, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152972274789222494, guid: 8391d7bccb0b6b440b12939ac28b4561, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3152972274789222494, guid: 8391d7bccb0b6b440b12939ac28b4561, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -956254745
+      objectReference: {fileID: 0}
     - target: {fileID: 3152972274789222495, guid: 8391d7bccb0b6b440b12939ac28b4561, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -591,8 +603,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 304264949
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3738eb58426f20143b49c183a104b8c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -781,8 +793,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6380630465215778807, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380630465215778807, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380630465215778807, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -956254745
       objectReference: {fileID: 0}
     - target: {fileID: 6380630465215778808, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_Material
@@ -799,6 +819,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6380630465215778810, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
   m_PrefabInstance: {fileID: 1099897380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1099897390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099897381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d5f910d53b44c4aae58988eec1e096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1550900053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,8 +1095,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 304264949
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3738eb58426f20143b49c183a104b8c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
