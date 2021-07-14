@@ -20,6 +20,10 @@ public class WeaponHandler : MonoBehaviour
 
     AttackState state = AttackState.ready;
 
+    void Start(){
+        weaponIndicator.sprite = weapon.icon;
+    }
+
     void handleReady()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
