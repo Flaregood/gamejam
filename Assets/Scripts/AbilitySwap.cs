@@ -19,6 +19,7 @@ public class AbilitySwap : MonoBehaviour
         {
             activeAbility = other.gameObject.GetComponent<AbilityPickupEntity>().GetStoredAbility();
             abilityHandler.ability = activeAbility;
+            abilityHandler.abilityIndicator.sprite = activeAbility.icon;
         // spooky potion💀
             Destroy(other.gameObject);
         }
