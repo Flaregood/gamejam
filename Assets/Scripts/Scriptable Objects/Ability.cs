@@ -10,6 +10,8 @@ public class Ability : ScriptableObject
     public float activeTime;
     public float activeProjectileTime;
 
+    public Sprite icon;
+
 //  To be overridden by base ability classes
     public virtual void Activate(GameObject parent) {}
     public virtual void BeginCooldown(GameObject parent) {}
