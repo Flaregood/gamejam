@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private int health;
+    [SerializeField] private Dialog[] deathDialogs;
+    [SerializeField] private Dialog[] responseDialogs;
+    private DialogController dialogController;
 
     float horizontal;
     float vertical;
@@ -22,6 +25,8 @@ public class PlayerController : MonoBehaviour
         instance = this;
         body = GetComponent<Rigidbody2D>();
         healthBar.SetMaxHealth(health);
+        dialogController = gameObject.GetComponentInChildren<DialogController>();
+
     }
 
     // Update is called once per frame
@@ -46,9 +51,16 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
         {
             GetComponent<PlayerAnimations>().Die();
-            
-
-
+            //! Freeze input or coroutine will get interupted by attack/movement script ⚠
+            DeathDialog();
         }
+    }
+
+    void DeathDialog()
+    {
+        Dialog randomDialog = deathDialogs[Random.Range(0, deathDialogs.Length)];
+        Dialog randomResponse = responseDialogs[Random.Range(0, responseDialogs.Length)]; 
+
+        StartCoroutine(dialogController.StartDialog(randomDialog,dialogController.StartDialog(randomResponse)));
     }
 }
