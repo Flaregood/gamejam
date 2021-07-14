@@ -15,8 +15,8 @@ MonoBehaviour:
   name: 
   cooldownTime: 2
   activeTime: 0
-  icon: {fileID: 0}
   activeProjectileTime: 5
+  icon: {fileID: 21300000, guid: 7cc98a8f1bd7a7d48ba8b62e71194aad, type: 3}
   projectile: {fileID: 4242213785938702123, guid: c3cecfb6f3e8e5a42bb65c58e4c0da7f, type: 3}
   distanceSpeed: 100
   spinSpeed: 200
