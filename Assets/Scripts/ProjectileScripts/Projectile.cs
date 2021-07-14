@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+
     public string attackerTag;
     public float activeTime;
     public int damage;
@@ -12,15 +14,20 @@ public class Projectile : MonoBehaviour
     public Vector2 centerPoint;
 
 
-    private void Update()
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    void Update()
     {
         activeTime -= Time.deltaTime;
 
         if (activeTime <= 0)
         {
-            Color color = GetComponent<SpriteRenderer>().color;
+            Color color = spriteRenderer.color;
             color = new Color(color.r, color.g, color.b, color.a - Time.deltaTime * 2);
-            GetComponent<SpriteRenderer>().color = color;
+            spriteRenderer.color = color;
 
             if (color.a <= 0)
                 Destroy(gameObject);
@@ -41,8 +48,13 @@ public class Projectile : MonoBehaviour
         {
             if (collision.gameObject.tag == "Player")
             {
-                //collision.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
-                //Destroy(gameObject);
+                collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+                Destroy(gameObject);
+            }
+            else if (collision.gameObject.tag == "Shield")
+            {
+                collision.gameObject.GetComponent<ShieldController>().TakeDamage(damage);
+                Destroy(gameObject);
             }
         }
     }
