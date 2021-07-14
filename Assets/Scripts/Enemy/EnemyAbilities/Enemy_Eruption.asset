@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 517733c4a8899d945842b0a3369d13ee, type: 3}
+  m_Name: Enemy_Eruption
+  m_EditorClassIdentifier: 
+  name: 
+  cooldownTime: 0
+  activeTime: 0
+  activeProjectileTime: 2
+  projectile: {fileID: 4242213785938702123, guid: c3cecfb6f3e8e5a42bb65c58e4c0da7f, type: 3}
+  distanceSpeed: 100
+  spinSpeed: 200
+  amountProjectiles: 8
+  damage: 15

@@ -462,7 +462,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -489,7 +489,7 @@ BoxCollider2D:
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
@@ -528,11 +528,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47d0fc23fb36b24fa5972fe1af3843e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability: {fileID: 11400000, guid: 1cd054f31e8ebaa4993a8e54ce6d1eac, type: 2}
-  health: 100
-  speed: 5
-  followRadius: 15
-  attackradius: 3
-  attackCooldown: 2.5
-  attackTime: 1.5
+  stats: {fileID: 11400000, guid: 598bf981aff78344f8f3f1889c5e40d4, type: 2}
+  ability: {fileID: 0}
+  health: 0
+  speed: 0
+  followRadius: 0
+  attackRadius: 0
+  attackTime: 0
+  attackCooldown: 0
   healthBar: {fileID: 3427065121489831554}

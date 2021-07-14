@@ -5,9 +5,10 @@ using UnityEngine;
 public class MapGenerator : MonoBehaviour
 {
     [SerializeField] private float PLAYER_DIST_SPAWN_PART = 50f;
-    int dWidth = 6, height = 5;
-    [SerializeField] GameObject[] middle;
-    [SerializeField] GameObject[] edges;
+    int dWidth = 6, height = 6;
+    [SerializeField] GameObject[] floor;
+    [SerializeField] GameObject[] edgesMiddle;
+    [SerializeField] GameObject[] edgesOuter;
     //middle1, edge1, middle2, edge2;
     private GameObject placeholder;
 
@@ -18,7 +19,7 @@ public class MapGenerator : MonoBehaviour
     [Range(1, 10)] [SerializeField] int heightDifferance;
 
     int startWidth, startHeight, pHeight;
-    string[] tileType = {"Floor", "Edge"};
+    string[] tileType = {"Floor", "EdgeVertical","EdgeHorizontal"};
 
 
 
@@ -46,39 +47,52 @@ public class MapGenerator : MonoBehaviour
         {            
             dWidth = Random.Range(widthMin, corridorWidth);
             height += Random.Range(heightMin, heightDifferance*2);
-            if (height > pHeight)
+            //Start of the room
+            if (height >= pHeight)
             {
-                float heightdiferance = height - pHeight;
+                float heightdiferance = height - pHeight-1;
                 //Debug.Log(heightdiferance);
                 for (int i = 0; i < heightdiferance; i++)
                 {
-                    spawnObj(PickTile("Edge"), (int)this.transform.position.x -1, (height - i) / 2);
-                    spawnObj(PickTile("Edge"), (int)this.transform.position.x -1, (-height + i) / 2 - 1);
+                    spawnObj(PickTile("EdgeVertical",3), (int)this.transform.position.x -1, (height - i) / 2+1); // Top
+                    spawnObj(PickTile("EdgeVertical",3), (int)this.transform.position.x -1, (-height + i) / 2 +1);// Bottom
+                    if (i == 0)
+                    {
+                    spawnObj(PickTile("EdgeHorizontal",2), (int)this.transform.position.x - 1, (-height + i) / 2 -1); 
+                    }
                 }
             }
         }
         else
         {
+            //End of the room
+
             if (height > startHeight)
             {
-                float heightdiferance = height - startHeight;
+                float heightdiferance = height - startHeight -1;
                 for (int i = 0; i < heightdiferance; i++)
                 {
-                    spawnObj(PickTile("Edge"), (int)this.transform.position.x, (height-i)/2);
-                    spawnObj(PickTile("Edge"), (int)this.transform.position.x, (-height+i)/2 - 1);
+                    spawnObj(PickTile("EdgeVertical",3), (int)this.transform.position.x, (height-i)/2+1); // Top
+                    spawnObj(PickTile("EdgeVertical",3), (int)this.transform.position.x, (-height+i)/2 + 1); //Bottom
+                    if (i == 0)
+                    {
+                        spawnObj(PickTile("EdgeHorizontal",2), (int)this.transform.position.x , (-height - i) / 2 - 1);
+                    }
                 }
+
             }
             dWidth = startWidth;
             height = startHeight;
+
         }
         for (int x = (int)this.transform.position.x; x < this.transform.position.x+dWidth; x++)
         {
             for (int y = (-height/2); y < height/2; y++)
             {
-                spawnObj(PickTile("Floor"), x, y);
+                spawnObj(PickTile("Floor",0), x, y);
             }
-            spawnObj(PickTile("Edge"), x, height/2);
-            spawnObj(PickTile("Edge"), x, -height/2-1);
+            spawnObj(PickTile("EdgeHorizontal",1), x, height/2);
+            spawnObj(PickTile("EdgeHorizontal",1), x, -height/2-1);
         }
     }
 
@@ -96,25 +110,36 @@ public class MapGenerator : MonoBehaviour
         }
     }
 
-    GameObject PickTile(string type)
+    GameObject PickTile(string type, int layer)
     {
         GameObject thing = null;
         //float rnd = Random.Range(0, middle.Length)*(player.transform.position.x/2);
         float rnd = player.transform.position.x + Random.Range(-TransitionLength/2, TransitionLength/2);
-        if (middle.Length != 0)
+        if (floor.Length != 0)
         {
             if (type == "Floor")
             {
-                rnd -= (middle.Length * BiomeLength) * (int)(rnd / (middle.Length * BiomeLength));
-                thing = middle[(int)(rnd / BiomeLength)];
+                rnd -= (floor.Length * BiomeLength) * (int)(rnd / (floor.Length * BiomeLength));
+                thing = floor[(int)(rnd / BiomeLength)];
+                thing.GetComponent<SpriteRenderer>().sortingOrder = layer;
             }
         }
-        if (edges.Length != 0)
+        if (edgesMiddle.Length != 0)
         {
-            if (type == "Edge")
+            if (type == "EdgeVertical")
             {
-                rnd -= (edges.Length * BiomeLength) * (int)(rnd / (edges.Length * BiomeLength));
-                thing = edges[(int)(rnd / BiomeLength)];
+                rnd -= (edgesMiddle.Length * BiomeLength) * (int)(rnd / (edgesMiddle.Length * BiomeLength));
+                thing = edgesMiddle[(int)(rnd / BiomeLength)];
+                thing.GetComponent<SpriteRenderer>().sortingOrder = layer;
+            }
+        }
+        if (edgesOuter.Length != 0)
+        {
+            if (type == "EdgeHorizontal")
+            {
+                rnd -= (edgesOuter.Length * BiomeLength) * (int)(rnd / (edgesOuter.Length * BiomeLength));
+                thing = edgesOuter[(int)(rnd / BiomeLength)];
+                thing.GetComponent<SpriteRenderer>().sortingOrder = layer;
             }
         }
         else

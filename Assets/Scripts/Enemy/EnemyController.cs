@@ -4,27 +4,37 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private Ability ability;
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private EnemyStats stats;
 
-    [SerializeField] private int health = 100;
-    [SerializeField] private float speed = 2;
-    [SerializeField] private int followRadius = 6;
-    [SerializeField] private int attackradius = 3;
+    private Ability ability;
+    private int health;
+    private float speed;
+    private int followRadius;
+    private int attackRadius;
 
-    [SerializeField] private float attackCooldown = 2.5f;
-    [SerializeField] private float attackTime = 1.5f;
+    private float attackTime; //Seconds till the combat animation uses the ability
 
+    private float attackCooldown; //Minimum time between two attacks
     private float startAttackCooldown;
 
-    private bool encounteredPlayer = false;
-    private bool isAttacking = false;
-
-    [SerializeField] private HealthBar healthBar;
+    private bool encounteredPlayer = false; //Was the player ever near enough for the enemy to follow him
+    private bool isAttacking = false; //Is the enemy currently attacking
 
     private void Start()
     {
-        healthBar.SetMaxHealth(health);
-        startAttackCooldown = attackCooldown;
+        GetComponent<SpriteRenderer>().sprite = stats.enemySprite;
+
+        ability = stats.ability;
+        health = stats.health;
+        speed = stats.speed;
+        followRadius = stats.followRadius;
+        attackRadius = stats.attackRadius;
+        attackTime = stats.attackTime;
+        attackCooldown = stats.attackCooldown;
+        startAttackCooldown = stats.attackCooldown;
+
+        healthBar.SetMaxHealth(stats.health);
     }
 
     private void FixedUpdate()
@@ -33,7 +43,7 @@ public class EnemyController : MonoBehaviour
 
         float distance = Vector2.Distance(PlayerController.instance.transform.position, transform.position);
 
-        if (distance < attackradius)
+        if (distance < attackRadius)
         {
             if (attackCooldown <= 0)
             {
@@ -78,6 +88,6 @@ public class EnemyController : MonoBehaviour
 
     public void FollowPlayer()
     {
-        transform.Translate((PlayerController.instance.transform.position - transform.position) * Time.fixedDeltaTime);
+        transform.Translate((PlayerController.instance.transform.position - transform.position) * speed * Time.fixedDeltaTime);
     }
 }
