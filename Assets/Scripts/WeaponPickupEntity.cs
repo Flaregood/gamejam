@@ -4,5 +4,22 @@ using UnityEngine;
 
 public class WeaponPickupEntity : MonoBehaviour
 {
-    public Weapon storedWeapon;
+    [SerializeField] private Weapon storedWeapon;
+
+    public WeaponPickupEntity(Weapon weapon){
+        storedWeapon = weapon;
+    }
+
+    void Start()
+    {
+        gameObject.tag = "WeaponPickup";
+        gameObject.GetComponent<SpriteRenderer>().sprite = storedWeapon.icon;
+        gameObject.GetComponentInChildren<TextMesh>().text = storedWeapon.name;
+    }
+
+    public Weapon GetStoredWeapon(){
+        return storedWeapon;
+    }
+
+
 }

@@ -17,7 +17,7 @@ public class AbilitySwap : MonoBehaviour
     {
         if (other.gameObject.tag == "AbilityPickup")
         {
-            activeAbility = other.gameObject.GetComponent<AbilityPickupEntity>().storedAbility;
+            activeAbility = other.gameObject.GetComponent<AbilityPickupEntity>().GetStoredAbility();
             abilityHandler.ability = activeAbility;
         // spooky potion💀
             Destroy(other.gameObject);

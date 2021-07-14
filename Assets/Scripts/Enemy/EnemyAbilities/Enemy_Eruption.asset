@@ -9,10 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0afe406eb0db804a8c9343e1ea397c4, type: 3}
-  m_Name: Fireball Weapon
+  m_Script: {fileID: 11500000, guid: 517733c4a8899d945842b0a3369d13ee, type: 3}
+  m_Name: Enemy_Eruption
   m_EditorClassIdentifier: 
-  name: Fireball
-  timeBetweenAttacks: 0.5
-  icon: {fileID: 21300000, guid: 0f6a734d2a0ebdb44b755c5ba03c1a14, type: 3}
+  name: 
+  cooldownTime: 0
+  activeTime: 0
+  activeProjectileTime: 2
   projectile: {fileID: 4242213785938702123, guid: c3cecfb6f3e8e5a42bb65c58e4c0da7f, type: 3}
+  distanceSpeed: 100
+  spinSpeed: 200
+  amountProjectiles: 8
+  damage: 15

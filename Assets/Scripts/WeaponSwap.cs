@@ -18,7 +18,7 @@ public class WeaponSwap : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "WeaponPickup")
         {
-           activeWeapon =  other.gameObject.GetComponent<WeaponPickupEntity>().storedWeapon;
+           activeWeapon =  other.gameObject.GetComponent<WeaponPickupEntity>().GetStoredWeapon();
            weaponHandler.weapon = activeWeapon;
             // kabooom 💥
            Destroy(other.gameObject);

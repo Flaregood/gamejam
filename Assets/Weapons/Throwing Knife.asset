@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Throwing Knife
   timeBetweenAttacks: 0.2
+  icon: {fileID: 21300000, guid: 48767c1b50f681a40806df6d45fc7dd0, type: 3}
   projectile: {fileID: 1936962238891192060, guid: b86715cff7921e64c984af5bb6740811, type: 3}
