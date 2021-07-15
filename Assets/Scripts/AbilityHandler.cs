@@ -21,7 +21,7 @@ public class AbilityHandler : MonoBehaviour
 
     void Start() 
     { 
-        abilityIndicator.sprite = ability.icon; 
+        abilityIndicator.sprite = ability.icon;
     }
 
     private void handleReady()
