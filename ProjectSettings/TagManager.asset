@@ -8,6 +8,7 @@ TagManager:
   - WeaponPickup
   - AbilityPickup
   - Projectile
+  - Shield
   layers:
   - Default
   - TransparentFX

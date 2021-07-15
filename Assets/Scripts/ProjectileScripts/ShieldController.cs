@@ -7,7 +7,6 @@ public class ShieldController : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    public Vector3 shieldOffset;
     public int shieldHealth;
     public float activeTime;
 
@@ -20,13 +19,12 @@ public class ShieldController : MonoBehaviour
 
     void Update()
     {
-        Vector2 targetPos = player.position + shieldOffset;
-        Vector2 target = Vector2.Lerp(transform.position, targetPos, 5 * Time.fixedDeltaTime);
+        Vector2 targetPos = Vector2.Lerp(transform.position, player.position, 20 * Time.fixedDeltaTime);
 
-        transform.position = new Vector3(target.x, target.y, transform.position.z);
+        transform.position = new Vector3(targetPos.x, targetPos.y, transform.position.z);
 
 
-        //transform.position = player.position + shieldOffset;
+        //transform.position = player.position;
 
         activeTime -= Time.deltaTime;
 

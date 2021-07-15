@@ -563,6 +563,10 @@ PrefabInstance:
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3427065123040112554, guid: 68e45c808f89ec045968a476ee9de99d, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 209dd30b4f70115498378c40c6e70091, type: 2}
+    - target: {fileID: 3427065123040112554, guid: 68e45c808f89ec045968a476ee9de99d, type: 3}
       propertyPath: ability
       value: 
       objectReference: {fileID: 0}
@@ -714,6 +718,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -956254745
       objectReference: {fileID: 0}
+    - target: {fileID: 6380630465215778804, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: ability
+      value: 
+      objectReference: {fileID: 11400000, guid: 20a0fb4c7c5a2f44f89cb0bcde26350f, type: 2}
     - target: {fileID: 6380630465215778804, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: abilityIndicator
       value: 

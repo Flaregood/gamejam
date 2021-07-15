@@ -69,10 +69,6 @@ public class AbilityHandler : MonoBehaviour
         }
     }
 
-    void Start(){
-        abilityIndicator.sprite = ability.icon;
-    }
-
     void Update()
     {
         switch (state)
