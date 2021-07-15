@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerAnimations : MonoBehaviour
 {
     private Vector2 Movement;
     public float Speed;
@@ -15,10 +15,7 @@ public class Player : MonoBehaviour
 
     #region Animations
     const string NormalAttackAnim = "NormalAttack";
-    const string MoveAnimy1 = "Move+y";
-    const string MoveAnimy2 = "Move-y";
-    const string MoveAnimx1 = "Move+x";
-    const string MoveAnimx2 = "Move-x";
+    const string MoveAnim = "Move";
     const string IdleAnim = "Idle";
     const string HurtAnim = "Hurt";
 	#endregion Animations
@@ -47,25 +44,22 @@ public class Player : MonoBehaviour
         {
             Flip();
         }
-        if (Movement.x > 0 && Movement.y == 0 && Attacking == false)
+        if (Attacking == true)
+        {
+            //call function to shoot from FEMI`s script
+            ChangeAnimationState(NormalAttackAnim);
+        }
+        else if (Movement != new Vector2(0,0) && Attacking == false)
 		{
-            ChangeAnimationState(MoveAnimx1);
+            ChangeAnimationState(MoveAnim);
 		}
-        if (Movement.x < 0 && Movement.y == 0 && Attacking == false)
-        {
-            ChangeAnimationState(MoveAnimx2);
-        }
-        if (Movement.x == 0 && Movement.y < 0 && Attacking == false)
-        {
-            ChangeAnimationState(MoveAnimy1);
-        }
-        if (Movement.x == 0 && Movement.y > 0 && Attacking == false)
-        {
-            ChangeAnimationState(MoveAnimy2);
-        }
+        else if (Movement == new Vector2(0, 0))
+		{
+            ChangeAnimationState(IdleAnim);
+		}
+
         else if (Attacking == true)
 		{
-            //call function to shoot from FEMI`s script
             ChangeAnimationState(NormalAttackAnim);
 		}
         
@@ -83,6 +77,10 @@ public class Player : MonoBehaviour
 	{
         Health = Health - demage;
         ChangeAnimationState(HurtAnim);
+        if(Health == 0)
+		{
+            Die();
+		}
 	}
 
     public void ChangeAnimationState(string NewState)
@@ -91,4 +89,8 @@ public class Player : MonoBehaviour
         anim.Play(NewState);
         CurrentState = NewState;
     }
+    private void Die()
+	{
+        Debug.Log("You Died");
+	}
 }
