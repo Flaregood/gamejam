@@ -9,19 +9,29 @@ public class EnemyAnimationHandler : MonoBehaviour
     private string CurrentState;
     private bool FacingRight;
     private bool Attacking;
+    private EnemyStats ScriptableObject;
     private string Idle;
     private string Move;
     private string Attack;
+    private string Die;
+    private string Hurt;
 
     void Start()
     {
         anim = GetComponent<Animator>();
-        Idle = "";
-        Move = "";
-        Attack = "";
+        ScriptableObject = GetComponent<EnemyController>().stats;
+
+        Move = ScriptableObject.MoveAnim;
+        Idle = ScriptableObject.IdleAnim;
+        Attack = ScriptableObject.AttackAnim;
+        Die = ScriptableObject.DieAnim;
+        Hurt = ScriptableObject.HurtAnim;
+
     }
 	private void FixedUpdate()
 	{
+        Attacking = GetComponent<EnemyController>().isAttacking;
+        
         if(transform.position.x - LastPosition.x == 0 && Attacking == false)
 		{
             ChangeAnimationState(Idle);
@@ -50,7 +60,11 @@ public class EnemyAnimationHandler : MonoBehaviour
 
 
 	}
-    public void ChangeAnimationState(string NewState)
+	private void Update()
+	{
+		
+	}
+	public void ChangeAnimationState(string NewState)
     {
         if (CurrentState == NewState) return;
         anim.Play(NewState);
@@ -61,5 +75,12 @@ public class EnemyAnimationHandler : MonoBehaviour
         FacingRight = !FacingRight;
         transform.eulerAngles = transform.eulerAngles + new Vector3(0, 180, 0);
     }
-
+    public void EnemyDie()
+	{
+        ChangeAnimationState(Die);
+	}
+    public void EnemyHurt()
+	{
+        ChangeAnimationState(Hurt);
+	}
 }

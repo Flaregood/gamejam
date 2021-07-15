@@ -15,4 +15,10 @@ public class EnemyStats : ScriptableObject
 
     public float attackCooldown; //Minimum time between two attacks
     public float attackTime; //Seconds till the combat animation uses the ability
+
+    public string IdleAnim;
+    public string MoveAnim;
+    public string AttackAnim;
+    public string DieAnim;
+    public string HurtAnim;
 }

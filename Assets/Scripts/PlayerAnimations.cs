@@ -14,10 +14,11 @@ public class PlayerAnimations : MonoBehaviour
     private bool Attacking;
 
     #region Animations
-    const string NormalAttackAnim = "NormalAttack";
-    const string MoveAnim = "Move";
-    const string IdleAnim = "Idle";
-    const string HurtAnim = "Hurt";
+    const string NormalAttackAnim = "NormalAttack_Player";
+    const string MoveAnim = "Move_Player";
+    const string IdleAnim = "Idle_Player";
+    const string HurtAnim = "Hurt_Player";
+    const string DieAnim = "Die_Player";
 	#endregion Animations
 	void Start()
     {
@@ -62,6 +63,7 @@ public class PlayerAnimations : MonoBehaviour
 		{
             ChangeAnimationState(NormalAttackAnim);
 		}
+
         
 
     }
@@ -71,17 +73,12 @@ public class PlayerAnimations : MonoBehaviour
         transform.eulerAngles = transform.eulerAngles + new Vector3(0, 180, 0);
     }
 
-
-
-    public void HurtPlayer(int demage)
+    public void Die()
 	{
-        Health = Health - demage;
-        ChangeAnimationState(HurtAnim);
-        if(Health == 0)
-		{
-            Die();
-		}
+        ChangeAnimationState(DieAnim);
 	}
+
+
 
     public void ChangeAnimationState(string NewState)
     {
@@ -89,8 +86,5 @@ public class PlayerAnimations : MonoBehaviour
         anim.Play(NewState);
         CurrentState = NewState;
     }
-    private void Die()
-	{
-        Debug.Log("You Died");
-	}
+
 }

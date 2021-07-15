@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private HealthBar healthBar;
-    [SerializeField] private EnemyStats stats;
+    public EnemyStats stats;
 
     private Ability ability;
     private int health;
@@ -19,7 +19,7 @@ public class EnemyController : MonoBehaviour
     private float startAttackCooldown;
 
     private bool encounteredPlayer = false; //Was the player ever near enough for the enemy to follow him
-    private bool isAttacking = false; //Is the enemy currently attacking
+    public bool isAttacking = false; //Is the enemy currently attacking
 
     private void Start()
     {
@@ -64,10 +64,12 @@ public class EnemyController : MonoBehaviour
         health -= damage;
         healthBar.SetHealth(health);
 
+
         if (health <= 0)
         {
             //TODO: Play death animation in here
-            Destroy(gameObject);
+            GetComponent<EnemyAnimationHandler>().EnemyDie();
+            Destroy(gameObject, 2);
         }
     }
 

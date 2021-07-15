@@ -45,8 +45,10 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
-            //TODO: Play death animation in here
-            gameObject.SetActive(false);
+            GetComponent<PlayerAnimations>().Die();
+            
+
+
         }
     }
 }
