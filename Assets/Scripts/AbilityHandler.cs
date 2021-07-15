@@ -19,6 +19,11 @@ public class AbilityHandler : MonoBehaviour
     }
     AbilityState state = AbilityState.ready;
 
+    void Start() 
+    { 
+        abilityIndicator.sprite = ability.icon; 
+    }
+
     private void handleReady()
     {
 
