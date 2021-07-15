@@ -88,6 +88,6 @@ public class EnemyController : MonoBehaviour
 
     public void FollowPlayer()
     {
-        transform.Translate((PlayerController.instance.transform.position - transform.position) * speed * Time.fixedDeltaTime);
+        transform.Translate((PlayerController.instance.transform.position - transform.position).normalized * speed * Time.fixedDeltaTime);
     }
 }
