@@ -288,10 +288,10 @@ MonoBehaviour:
   fill: {fileID: 3427065122114499695}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.4627451, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.29803923, b: 0.29803923, a: 1}
-    key2: {r: 1, g: 0.94509804, b: 0.29803923, a: 0}
-    key3: {r: 0.029375672, g: 1, b: 0, a: 0}
+    key0: {r: 0.7928543, g: 0, b: 1, a: 1}
+    key1: {r: 0.508572, g: 0.2980392, b: 1, a: 1}
+    key2: {r: 0.17150229, g: 0.4162214, b: 0.8867924, a: 0}
+    key3: {r: 0, g: 0.8898306, b: 1, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.8901961, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -561,6 +561,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3427065121489831554}
   spriteRenderer: {fileID: 1289819863315422990}
-  shieldOffset: {x: 2, y: 0, z: 0}
   shieldHealth: 0
   activeTime: 0

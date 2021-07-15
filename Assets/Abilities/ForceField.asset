@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940a5e38c34a73f4c8e3c70ed273406c, type: 3}
+  m_Name: ForceField
+  m_EditorClassIdentifier: 
+  name: 
+  cooldownTime: 5
+  activeTime: 10
+  activeProjectileTime: 0
+  icon: {fileID: 21300000, guid: fcacac0bc5a334d4682a5eed70f400a9, type: 3}
+  forcefield: {fileID: 1453288389961097319, guid: 023017a42fe3c304999e469dbbe16813, type: 3}
+  shieldHealth: 300

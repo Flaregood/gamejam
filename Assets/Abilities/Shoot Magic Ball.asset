@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 236e85bead113544485042cb371b686c, type: 3}
-  m_Name: Shoot Magic Ball Ability
+  m_Name: Shoot Magic Ball
   m_EditorClassIdentifier: 
   name: 
   cooldownTime: 0
