@@ -16,9 +16,10 @@ MonoBehaviour:
   cooldownTime: 0
   activeTime: 0
   activeProjectileTime: 2
+  icon: {fileID: 0}
   projectile: {fileID: 4242213785938702123, guid: 53036e4fe4a64434cbe2ffa8f033d067, type: 3}
-  movingSpeed: 5
-  distanceSpeed: 1
-  spinSpeed: 200
+  movingSpeed: 15
+  distanceSpeed: 100
+  spinSpeed: 500
   amountProjectiles: 8
   damage: 15

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Shrink
   m_EditorClassIdentifier: 
   name: Shrink
-  cooldownTime: 3
+  cooldownTime: 0
   activeTime: 2
-  shrinkFactor: 0.5
+  activeProjectileTime: 0
+  icon: {fileID: 0}
+  shrinkFactor: 0.05

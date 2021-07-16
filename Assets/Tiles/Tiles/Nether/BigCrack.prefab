@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2528640785725336894}
   - component: {fileID: -5299780723467310502}
   m_Layer: 0
-  m_Name: GroundTile
+  m_Name: BigCrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 846aadd1bb6d1694595cb742e5c2d5e4, type: 3}
-  m_Color: {r: 0.46858314, g: 0.8490566, b: 0.82943636, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8895fd84c02132c4ea5b6c476496d9c8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
