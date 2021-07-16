@@ -21,10 +21,14 @@ public class EnemyController : MonoBehaviour
     private bool encounteredPlayer = false; //Was the player ever near enough for the enemy to follow him
     public bool isAttacking = false; //Is the enemy currently attacking
 
+
+
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = stats.enemySprite;
+        GetComponent<SpriteRenderer>().color = stats.SpriteColor;
 
+        transform.localScale = stats.size;
         ability = stats.ability;
         health = stats.health;
         speed = stats.speed;

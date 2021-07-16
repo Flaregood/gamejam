@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5f5913b0021f49498e0c37864c84a9b, type: 3}
-  m_Name: CircleEnemy
+  m_Name: Rock_moster
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: c4bdb8a4140e168479405cc917c4e7bb, type: 2}
-  enemySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  enemySprite: {fileID: 7482667652216324306, guid: d1478cc1a3f0b544db9614e427132fbf, type: 3}
   health: 100
   speed: 4
   followRadius: 10
   attackRadius: 4
   attackCooldown: 0.75
   attackTime: 0.5
+  size: {x: 2, y: 2}
+  SpriteColor: {r: 0.3679245, g: 0.3679245, b: 0.3679245, a: 1}

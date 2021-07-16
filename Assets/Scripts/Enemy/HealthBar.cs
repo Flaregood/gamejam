@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     public Image fill;
     public Gradient gradient;
 
-    private void Start()
+    private void Awake()
     {
         slider = GetComponent<Slider>();
     }
