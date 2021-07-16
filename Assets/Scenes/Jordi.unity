@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15a6aba8895dcf459c0996e5f197e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1099897381}
 --- !u!23 &135169084
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1345,6 +1346,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 368c8b5d6fd02244f80d29803f51d6c2, type: 2}
+    - target: {fileID: 6380630465215778808, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6380630465215778810, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1400,6 +1405,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6380630465215778810, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
   m_PrefabInstance: {fileID: 1099897380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1099897382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099897381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f41b9a73bcbc9459f3df003acdd24e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 200
+  Health: 10
 --- !u!4 &1099897390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6380630465215778806, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
@@ -1559,24 +1578,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PLAYER_DIST_SPAWN_PART: 20
   floor:
-  - {fileID: 2742681074247761969, guid: f96f7354dc8f4f242b9d89bce2ed7f35, type: 3}
-  - {fileID: 2742681074247761969, guid: fccc39ed0b232b34a9604d6da53f8e66, type: 3}
-  - {fileID: 2742681074247761969, guid: c4946f2222c16f0448ceddf132ed2afa, type: 3}
-  edgesMiddle:
-  - {fileID: 7609768319521255888, guid: f7cccda3de069c94ab17afba52e04049, type: 3}
-  - {fileID: 7609768319521255888, guid: 73ec9dfd45897e84a8a04272e693d7d0, type: 3}
-  - {fileID: 7609768319521255888, guid: e02b7f8f23fe85c409beeb13e8ad4ef1, type: 3}
-  edgesOuter:
-  - {fileID: 3155467111604026117, guid: d69a5db8bc88b9e45b6d3d5f47a96d65, type: 3}
-  - {fileID: 3155467111604026117, guid: 16472deb418e8b841a0eb7b3d35f3768, type: 3}
-  - {fileID: 3155467111604026117, guid: b011902a541bf56469d0ffd9f9507e74, type: 3}
-  BiomeLength: 100
-  TransitionLength: 50
-  roomSpawnChance: 50
+  - FloorTiles:
+    - {fileID: 2742681074247761969, guid: f96f7354dc8f4f242b9d89bce2ed7f35, type: 3}
+  - FloorTiles:
+    - {fileID: 2742681074247761969, guid: af16457a39f30db4e9f16251d018bd90, type: 3}
+    - {fileID: 2742681074247761969, guid: fccc39ed0b232b34a9604d6da53f8e66, type: 3}
+    - {fileID: 2742681074247761969, guid: c07e4440b72ae064a98273429726c14d, type: 3}
+    - {fileID: 2742681074247761969, guid: 9104ded2d6c53d5488b8ee96d7d5e0a3, type: 3}
+  - FloorTiles:
+    - {fileID: 2742681074247761969, guid: c4946f2222c16f0448ceddf132ed2afa, type: 3}
+  - FloorTiles:
+    - {fileID: 2742681074247761969, guid: b66b67024a1e3914daecc7f25a40f6e5, type: 3}
+  wallTops:
+  - TopTiles:
+    - {fileID: 7609768319521255888, guid: f7cccda3de069c94ab17afba52e04049, type: 3}
+  - TopTiles:
+    - {fileID: 7609768319521255888, guid: 73ec9dfd45897e84a8a04272e693d7d0, type: 3}
+  - TopTiles:
+    - {fileID: 7609768319521255888, guid: e02b7f8f23fe85c409beeb13e8ad4ef1, type: 3}
+  - TopTiles:
+    - {fileID: 7609768319521255888, guid: ce041e8a404b3674996a057f528a9d2a, type: 3}
+  wallMiddle:
+  - WallMiddle:
+    - {fileID: 3155467111604026117, guid: d69a5db8bc88b9e45b6d3d5f47a96d65, type: 3}
+  - WallMiddle:
+    - {fileID: 3155467111604026117, guid: 16472deb418e8b841a0eb7b3d35f3768, type: 3}
+  - WallMiddle:
+    - {fileID: 3155467111604026117, guid: b011902a541bf56469d0ffd9f9507e74, type: 3}
+  - WallMiddle:
+    - {fileID: 3155467111604026117, guid: 1141bdc90f005454588aaf52c58ec6c0, type: 3}
+  EnemyBiomes:
+  - Enemys:
+    - {fileID: 11400000, guid: 1c08142ffc256e94c836b8c52c28ed83, type: 2}
+    - {fileID: 11400000, guid: 31dd5605c70c30e4fbf8e3c058f42e13, type: 2}
+    - {fileID: 11400000, guid: 5fe9364104d426d4ab25c310df35f8ea, type: 2}
+    - {fileID: 11400000, guid: b2d1f8d65de8b494fb6720a77de467d1, type: 2}
+    - {fileID: 11400000, guid: ab4d7ae20417e5640a1a3918a1cc7fa7, type: 2}
+  - Enemys:
+    - {fileID: 11400000, guid: 207d5020dcb2a1440aebfb61f3e722c5, type: 2}
+    - {fileID: 11400000, guid: c794d808c3f685f4b93d00952e5bdace, type: 2}
+  - Enemys:
+    - {fileID: 11400000, guid: 863aba2791d4c9643972a63ef4d98986, type: 2}
+    - {fileID: 11400000, guid: d20de8f5a29f5444984ef3d0541c6be7, type: 2}
+  - Enemys:
+    - {fileID: 11400000, guid: 92a07356c1d7d9b4e986c0df42261618, type: 2}
+    - {fileID: 11400000, guid: a19ed178c753f4145abc51272b42f9a3, type: 2}
+  BaseEnemy: {fileID: 3427065123040112553, guid: d654351d54557a44fae1c28a0c42a487, type: 3}
+  BiomeLength: 250
+  TransitionLength: 0
+  roomSpawnChance: 54
+  enemySpawnChanceIncrease: 1
   corridorWidth: 8
   heightDifferance: 10
+  TileSpawnThing: 0.001
+  WallTopThingy: 0.000001
+  Wallmiddlethingy: 0.000001
   player: {fileID: 1099897381}
   MapStorage: {fileID: 810835492}
+  EnemyStorage: {fileID: 633577041}
 --- !u!1 &1546618826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15a6aba8895dcf459c0996e5f197e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1099897381}
 --- !u!65 &1550900057
 BoxCollider:
   m_ObjectHideFlags: 0
