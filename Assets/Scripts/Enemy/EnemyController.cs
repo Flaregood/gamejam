@@ -72,7 +72,7 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             //TODO: Play death animation in here
-            GetComponent<EnemyAnimationHandler>().EnemyDie();
+            // GetComponent<EnemyAnimationHandler>().EnemyDie();
             Destroy(gameObject, 2);
         }
     }

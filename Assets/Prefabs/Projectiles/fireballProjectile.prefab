@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackerTag: 
   activeTime: 0
-  damage: 5
+  damage: 1000
   distanceSpeed: 20
   spinningSpeed: 200
   centerPoint: {x: 0, y: 0}

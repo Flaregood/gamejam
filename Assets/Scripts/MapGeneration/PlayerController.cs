@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
+
+            DisablePlayer();
             GetComponent<PlayerAnimations>().Die();
             //! Freeze input or coroutine will get interupted by attack/movement script ⚠
             DeathDialog();
@@ -62,5 +64,13 @@ public class PlayerController : MonoBehaviour
         Dialog randomResponse = responseDialogs[Random.Range(0, responseDialogs.Length)]; 
 
         StartCoroutine(dialogController.StartDialog(randomDialog,dialogController.StartDialog(randomResponse)));
+    }
+
+    void DisablePlayer(){
+        this.enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        gameObject.GetComponent<Rigidbody2D>().simulated = false;
+        gameObject.GetComponent<AbilityHandler>().enabled = false;
+        gameObject.GetComponent<WeaponHandler>().enabled = false;
     }
 }
