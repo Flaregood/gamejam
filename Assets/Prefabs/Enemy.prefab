@@ -530,3 +530,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3427065121489831554}
   stats: {fileID: 11400000, guid: 598bf981aff78344f8f3f1889c5e40d4, type: 2}
+  health: 0

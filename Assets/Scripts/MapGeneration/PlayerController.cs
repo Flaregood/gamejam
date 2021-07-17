@@ -8,10 +8,16 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D body;
 
     [SerializeField] private HealthBar healthBar;
+<<<<<<< Updated upstream
     [SerializeField] private int health;
     [SerializeField] private Dialog[] deathDialogs;
     [SerializeField] private Dialog[] responseDialogs;
     private DialogController dialogController;
+=======
+    [SerializeField] public int health;
+    
+    private int maxHealth;
+>>>>>>> Stashed changes
 
     float horizontal;
     float vertical;
@@ -23,6 +29,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         instance = this;
+        maxHealth = health;
         body = GetComponent<Rigidbody2D>();
         healthBar.SetMaxHealth(health);
         dialogController = gameObject.GetComponentInChildren<DialogController>();
@@ -55,6 +62,10 @@ public class PlayerController : MonoBehaviour
             GetComponent<PlayerAnimations>().Die();
             //! Freeze input or coroutine will get interupted by attack/movement script ⚠
             DeathDialog();
+        }
+        else if (health > maxHealth)
+        {
+            health = maxHealth;
         }
     }
 
