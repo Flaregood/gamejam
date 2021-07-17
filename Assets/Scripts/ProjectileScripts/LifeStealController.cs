@@ -5,40 +5,58 @@ using UnityEngine;
 public class LifeStealController : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] public GameObject lifeStealParticlePrefab;
 
     public string attackerTag;
     public float activeTime;
     public int damage;
     public float distanceSpeed;
+    public float damageTick;
+    public float startDamageTick;
 
     private Transform player;
-    private GameObject[] enemys;
+    public List<GameObject> enemys = new List<GameObject>();
 
     private void Start()
     {
         player = transform.parent;
+        startDamageTick = damageTick;
     }
 
     void Update()
     {
-        DamageEnemys();
-
         activeTime -= Time.deltaTime;
+        damageTick -= Time.deltaTime;
+
+        if (damageTick <= 0)
+        {
+            damageTick = startDamageTick;
+            DamageEnemys();
+        }
 
         if (activeTime <= 0)
         {
-            Color color = spriteRenderer.color;
-            color = new Color(color.r, color.g, color.b, color.a - Time.deltaTime * 2);
-            spriteRenderer.color = color;
-
-            if (color.a <= 0)
-                Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
     public void DamageEnemys()
     {
+        List<GameObject> killedEnemys = new List<GameObject>();
 
+        for (int i = 0; i < enemys.Count; i++)
+        {
+            if (attackerTag == "Player")
+            {
+                enemys[i].GetComponent<EnemyController>().TakeDamage(damage);
+                transform.parent.GetComponent<PlayerController>().TakeDamage(-damage);
+            }
+            else
+            {
+                enemys[i].GetComponent<PlayerController>().TakeDamage(damage);
+                transform.parent.GetComponent<EnemyController>().TakeDamage(-damage);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,21 +65,53 @@ public class LifeStealController : MonoBehaviour
         {
             if (collision.gameObject.tag == "Enemy")
             {
-                collision.gameObject.GetComponent<EnemyController>().TakeDamage(damage);
-                Destroy(gameObject);
+                enemys.Add(collision.gameObject);
+                AdLifeStealParticles(collision.transform);
             }
         }
         else
         {
             if (collision.gameObject.tag == "Player")
             {
-                collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
-                Destroy(gameObject);
+                enemys.Add(collision.gameObject);
+                AdLifeStealParticles(collision.transform);
             }
-            else if (collision.gameObject.tag == "Shield")
+        }
+    }    
+    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (attackerTag == "Player")
+        {
+            if (collision.gameObject.tag == "Enemy")
             {
-                collision.gameObject.GetComponent<ShieldController>().TakeDamage(damage);
-                Destroy(gameObject);
+                enemys.Remove(collision.gameObject);
+                RemoveLifeStealParticles(collision.transform);
+            }
+        }
+        else
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                enemys.Remove(collision.gameObject);
+                RemoveLifeStealParticles(collision.transform);
+            }
+        }
+    }
+
+    private void AdLifeStealParticles(Transform parent)
+    {
+        Instantiate(original: lifeStealParticlePrefab, parent: parent);
+    }
+
+    private void RemoveLifeStealParticles(Transform parent)
+    {
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            if (parent.GetChild(i).name == "LifeStealParticleSystem(Clone)")
+            {
+                Destroy(parent.GetChild(i).gameObject);
+                return;
             }
         }
     }

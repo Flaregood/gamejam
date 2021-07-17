@@ -10,6 +10,12 @@ public class ThrowingKnife : MonoBehaviour
 
     void Start()
     {
+        Vector2 startPos = new Vector2(transform.position.x, transform.position.y);
+        Vector2 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        transform.LookAt(clickPos);
+        transform.Rotate(new Vector3(0,-90,0));
+
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * speed;
     }

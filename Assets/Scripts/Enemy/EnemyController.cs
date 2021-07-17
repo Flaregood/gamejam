@@ -8,10 +8,10 @@ public class EnemyController : MonoBehaviour
     public EnemyStats stats;
 
     private Ability ability;
-    private int health;
+    public int health;
     private float speed;
     private int followRadius;
-    private int attackRadius;
+    public int attackRadius;
 
     private float attackTime; //Seconds till the combat animation uses the ability
 
@@ -72,8 +72,13 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             //TODO: Play death animation in here
+<<<<<<< Updated upstream
             // GetComponent<EnemyAnimationHandler>().EnemyDie();
             Destroy(gameObject, 2);
+=======
+            gameObject.GetComponent<Collider2D>();
+            Destroy(gameObject);
+>>>>>>> Stashed changes
         }
     }
 
