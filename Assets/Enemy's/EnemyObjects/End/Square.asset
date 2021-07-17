@@ -15,6 +15,7 @@ MonoBehaviour:
   ability: {fileID: 11400000, guid: e47d94c660b759f44b168bfad2f15611, type: 2}
   enemySprite: {fileID: 7482667652216324306, guid: d1478cc1a3f0b544db9614e427132fbf, type: 3}
   health: 100
+<<<<<<< Updated upstream:Assets/Enemy's/EnemyObjects/End/Square.asset
   speed: 4
   followRadius: 10
   attackRadius: 4
@@ -22,3 +23,10 @@ MonoBehaviour:
   attackTime: 0.5
   size: {x: 1, y: 1}
   SpriteColor: {r: 0, g: 0, b: 0, a: 1}
+=======
+  speed: 5
+  followRadius: 6
+  attackRadius: 5
+  attackCooldown: 2
+  attackTime: 1
+>>>>>>> Stashed changes:Assets/Scripts/Enemy/EnemyObjects/SquareEnemy.asset

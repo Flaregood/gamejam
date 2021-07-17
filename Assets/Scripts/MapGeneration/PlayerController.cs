@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Dialog[] deathDialogs;
     [SerializeField] private Dialog[] responseDialogs;
     private DialogController dialogController;
+    
+    [SerializeField] public int health;
+    private int maxHealth;
 
     [SerializeField] public int health;
     private int maxHealth;
@@ -68,7 +71,7 @@ public class PlayerController : MonoBehaviour
     void DeathDialog()
     {
         Dialog randomDialog = deathDialogs[Random.Range(0, deathDialogs.Length)];
-        Dialog randomResponse = responseDialogs[Random.Range(0, responseDialogs.Length)]; 
+        Dialog randomResponse = responseDialogs[Random.Range(0, responseDialogs.Length)];
 
         StartCoroutine(dialogController.StartDialog(randomDialog,dialogController.StartDialog(randomResponse)));
     }

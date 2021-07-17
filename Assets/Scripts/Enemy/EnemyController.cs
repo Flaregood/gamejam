@@ -72,9 +72,14 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             //TODO: Play death animation in here
+<<<<<<< Updated upstream
             // GetComponent<EnemyAnimationHandler>().EnemyDie();
             gameObject.GetComponent<Collider2D>().enabled = false;
             Destroy(gameObject, 2);
+=======
+            gameObject.GetComponent<Collider2D>();
+            Destroy(gameObject);
+>>>>>>> Stashed changes
         }
     }
 
