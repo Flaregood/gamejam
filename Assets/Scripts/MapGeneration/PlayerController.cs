@@ -15,9 +15,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public int health;
     private int maxHealth;
 
-    [SerializeField] public int health;
-    private int maxHealth;
-
     float horizontal;
     float vertical;
 
