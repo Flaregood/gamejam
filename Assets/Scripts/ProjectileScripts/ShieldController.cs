@@ -15,6 +15,7 @@ public class ShieldController : MonoBehaviour
     private void Start()
     {
         player = PlayerController.instance.transform;
+        healthBar.SetMaxHealth(shieldHealth);
     }
 
     void Update()

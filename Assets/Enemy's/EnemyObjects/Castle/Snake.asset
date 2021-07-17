@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f5913b0021f49498e0c37864c84a9b, type: 3}
+  m_Name: Snake
+  m_EditorClassIdentifier: 
+  ability: {fileID: 11400000, guid: c4bdb8a4140e168479405cc917c4e7bb, type: 2}
+  enemySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  health: 100
+  speed: 0
+  followRadius: 4
+  attackRadius: 10
+  attackCooldown: 0.75
+  attackTime: 0.5
+  IdleAnim: 
+  MoveAnim: 
+  AttackAnim: 
+  DieAnim: 
+  HurtAnim: 
+  size: {x: 1, y: 1}
+  SpriteColor: {r: 0, g: 0.6384635, b: 1, a: 1}

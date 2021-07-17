@@ -45,16 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 2174898675
-    locked: 1
+    locked: 0
   - name: Map
     uniqueID: 4077039081
-    locked: 1
+    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 1
+    locked: 0
   - name: PlayArea
     uniqueID: 3338712551
-    locked: 1
+    locked: 0
   - name: Foreground
     uniqueID: 304264949
-    locked: 1
+    locked: 0

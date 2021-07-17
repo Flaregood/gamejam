@@ -8,10 +8,10 @@ public class EnemyController : MonoBehaviour
     public EnemyStats stats;
 
     private Ability ability;
-    private int health;
+    public int health;
     private float speed;
     private int followRadius;
-    private int attackRadius;
+    public int attackRadius;
 
     private float attackTime; //Seconds till the combat animation uses the ability
 
@@ -21,10 +21,14 @@ public class EnemyController : MonoBehaviour
     private bool encounteredPlayer = false; //Was the player ever near enough for the enemy to follow him
     public bool isAttacking = false; //Is the enemy currently attacking
 
+
+
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = stats.enemySprite;
+        GetComponent<SpriteRenderer>().color = stats.SpriteColor;
 
+        transform.localScale = stats.size;
         ability = stats.ability;
         health = stats.health;
         speed = stats.speed;
@@ -68,7 +72,8 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             //TODO: Play death animation in here
-            GetComponent<EnemyAnimationHandler>().EnemyDie();
+            // GetComponent<EnemyAnimationHandler>().EnemyDie();
+            gameObject.GetComponent<Collider2D>().enabled = false;
             Destroy(gameObject, 2);
         }
     }

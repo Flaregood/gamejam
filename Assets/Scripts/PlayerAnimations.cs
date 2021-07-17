@@ -75,16 +75,16 @@ public class PlayerAnimations : MonoBehaviour
 
     public void Die()
 	{
-        ChangeAnimationState(DieAnim);
+        // ChangeAnimationState(DieAnim);
 	}
 
 
 
     public void ChangeAnimationState(string NewState)
     {
-        if (CurrentState == NewState) return;
-        anim.Play(NewState);
-        CurrentState = NewState;
+        // if (CurrentState == NewState) return;
+        // anim.Play(NewState);
+        // CurrentState = NewState;
     }
 
 }

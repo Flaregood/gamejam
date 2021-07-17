@@ -8,7 +8,12 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D body;
 
     [SerializeField] private HealthBar healthBar;
-    [SerializeField] private int health;
+    [SerializeField] private Dialog[] deathDialogs;
+    [SerializeField] private Dialog[] responseDialogs;
+    private DialogController dialogController;
+    
+    [SerializeField] public int health;
+    private int maxHealth;
 
     float horizontal;
     float vertical;
@@ -20,8 +25,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         instance = this;
+        maxHealth = health;
         body = GetComponent<Rigidbody2D>();
         healthBar.SetMaxHealth(health);
+        dialogController = gameObject.GetComponentInChildren<DialogController>();
+
     }
 
     // Update is called once per frame
@@ -45,10 +53,31 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
+
+            DisablePlayer();
             GetComponent<PlayerAnimations>().Die();
-            
-
-
+            //! Freeze input or coroutine will get interupted by attack/movement script ⚠
+            DeathDialog();
         }
+        else if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
+
+    void DeathDialog()
+    {
+        Dialog randomDialog = deathDialogs[Random.Range(0, deathDialogs.Length)];
+        Dialog randomResponse = responseDialogs[Random.Range(0, responseDialogs.Length)];
+
+        StartCoroutine(dialogController.StartDialog(randomDialog,dialogController.StartDialog(randomResponse)));
+    }
+
+    void DisablePlayer(){
+        this.enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        gameObject.GetComponent<Rigidbody2D>().simulated = false;
+        gameObject.GetComponent<AbilityHandler>().enabled = false;
+        gameObject.GetComponent<WeaponHandler>().enabled = false;
     }
 }
