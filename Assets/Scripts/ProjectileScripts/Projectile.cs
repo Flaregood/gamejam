@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
     public Vector2 centerPoint;
 
 
-    private void Start()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

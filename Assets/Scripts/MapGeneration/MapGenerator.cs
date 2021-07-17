@@ -11,6 +11,10 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] private List<EdgeOuter> wallMiddle;
     [SerializeField] private List<Biomes> EnemyBiomes;
     [SerializeField] GameObject BaseEnemy;
+    [SerializeField] private List<Ability> abilitys;
+    [SerializeField] private List<Weapon> weapons;
+    [SerializeField] GameObject abilityPickup;
+    [SerializeField] GameObject autoAttackMod;
     //[SerializeField] GameObject[] enemys;
     private GameObject placeholder;
 
@@ -168,6 +172,23 @@ public class MapGenerator : MonoBehaviour
         obj.GetComponent<EnemyController>().stats = noice;
         obj.GetComponent<SpriteRenderer>().sortingOrder = layer;
     }
+
+    void SpawnWeapon(Weapon noice, int width, int height, int layer)
+    {
+        GameObject obj = autoAttackMod;
+        obj = Instantiate(obj, new Vector2(width, height), Quaternion.identity, EnemyStorage.transform);
+        obj.GetComponent<WeaponPickupEntity>().storedWeapon = noice;
+        obj.GetComponent<SpriteRenderer>().sortingOrder = layer;
+    }
+
+    void SpawnAbility(Ability noice, int width, int height, int layer)
+    {
+        GameObject obj = abilityPickup;
+        obj = Instantiate(obj, new Vector2(width, height), Quaternion.identity, EnemyStorage.transform);
+        obj.GetComponent<AbilityPickupEntity>().storedAbility = noice;
+        obj.GetComponent<SpriteRenderer>().sortingOrder = layer;
+    }
+
     // Update is called once per frame
 
     GameObject PickTile(string type, int layer)
@@ -262,6 +283,16 @@ public class MapGenerator : MonoBehaviour
                         EnemyChance = 0;
                     }
                     SpawnEnemy(EnemyBiomes[(int)(rnd / BiomeLength)].Enemys[EnemyChance], (int)pos.x, (int)pos.y,layer+1);
+                }
+
+                if (height > startHeight + heightDifferance * 3)
+                {
+                    float R = Random.Range(0f, 100f);
+                    float abilitySpawnChance = Mathf.Sqrt((0.03f * player.transform.position.x + height / 100) * enemySpawnChanceIncrease);
+                    if (R < abilitySpawnChance)
+                    {
+                        SpawnAbility(abilitys[Random.Range(0, abilitys.Count)], (int)pos.x, (int)pos.y, layer + 1);
+                    }
                 }
                 
             }

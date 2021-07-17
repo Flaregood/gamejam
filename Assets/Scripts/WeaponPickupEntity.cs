@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponPickupEntity : MonoBehaviour
 {
-    [SerializeField] private Weapon storedWeapon;
+    [SerializeField] public Weapon storedWeapon;
 
     public WeaponPickupEntity(Weapon weapon){
         storedWeapon = weapon;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AbilityPickupEntity : MonoBehaviour
 {
-    [SerializeField] private Ability storedAbility;
+    [SerializeField] public Ability storedAbility;
 
 // Spicy constructor for instenctiating for spell drops from enemy death.
     public AbilityPickupEntity(Ability ability){
