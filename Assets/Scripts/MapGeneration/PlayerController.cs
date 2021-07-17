@@ -8,16 +8,12 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D body;
 
     [SerializeField] private HealthBar healthBar;
-<<<<<<< Updated upstream
-    [SerializeField] private int health;
     [SerializeField] private Dialog[] deathDialogs;
     [SerializeField] private Dialog[] responseDialogs;
     private DialogController dialogController;
-=======
+
     [SerializeField] public int health;
-    
     private int maxHealth;
->>>>>>> Stashed changes
 
     float horizontal;
     float vertical;
