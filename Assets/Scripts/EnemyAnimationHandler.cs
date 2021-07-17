@@ -18,8 +18,9 @@ public class EnemyAnimationHandler : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         ScriptableObject = GetComponent<EnemyController>().stats;
+        anim = ScriptableObject.anim;
+
 
         Move = ScriptableObject.MoveAnim;
         Idle = ScriptableObject.IdleAnim;
@@ -41,7 +42,7 @@ public class EnemyAnimationHandler : MonoBehaviour
             Flip();
             ChangeAnimationState(Move);
 		}
-        if(transform.position.x - LastPosition.x < 0 && FacingRight == false)
+        if(transform.position.x - LastPosition.x < 0 && FacingRight == true)
 		{
             Flip();
             ChangeAnimationState(Move);
@@ -73,7 +74,6 @@ public class EnemyAnimationHandler : MonoBehaviour
     public void Flip()
     {
         FacingRight = !FacingRight;
-        transform.eulerAngles = transform.eulerAngles + new Vector3(0, 180, 0);
     }
     public void EnemyDie()
 	{

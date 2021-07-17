@@ -21,4 +21,6 @@ public class EnemyStats : ScriptableObject
     public string AttackAnim;
     public string DieAnim;
     public string HurtAnim;
+
+    public Animator anim;
 }
