@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/StartingCutScene.unity
+    guid: 5e97def70dd20c14e881bb1c69e345c5
+  - enabled: 1
+    path: Assets/Scenes/Jordi.unity
+    guid: 884d04ad22186ea4384c426741d000f8
   m_configObjects: {}

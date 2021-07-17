@@ -498,6 +498,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 92a07356c1d7d9b4e986c0df42261618, type: 2}
     - {fileID: 11400000, guid: a19ed178c753f4145abc51272b42f9a3, type: 2}
   BaseEnemy: {fileID: 3427065123040112553, guid: d654351d54557a44fae1c28a0c42a487, type: 3}
+  abilitys: []
+  weapons: []
+  abilityPickup: {fileID: 0}
+  autoAttackMod: {fileID: 0}
   BiomeLength: 250
   TransitionLength: 0
   roomSpawnChance: 54
@@ -1369,6 +1373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 859798460}
   - component: {fileID: 859798459}
+  - component: {fileID: 859798461}
   m_Layer: 0
   m_Name: EvelynActor
   m_TagString: Untagged
@@ -1417,7 +1422,7 @@ SpriteRenderer:
   m_SortingLayerID: -956254745
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 53ed820a239033d4688c436d7bc5b564, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b47dead5b2540e94b91a5680ba602bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1437,11 +1442,30 @@ Transform:
   m_GameObject: {fileID: 859798458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.13, y: 3.23, z: 1}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 2043382360}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &859798461
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859798458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9bf073a9f70ce5f40b4d21aeda4664a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &982845949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,6 +2092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618011437}
   - component: {fileID: 1618011436}
+  - component: {fileID: 1618011438}
   m_Layer: 0
   m_Name: JamesActor
   m_TagString: Untagged
@@ -2116,7 +2141,7 @@ SpriteRenderer:
   m_SortingLayerID: -956254745
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a912ab092b6e40e40899ad4604e9f6e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a176daf742593274d929b869eb4742a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2136,11 +2161,30 @@ Transform:
   m_GameObject: {fileID: 1618011435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.94, y: 3.27, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 2043382360}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1618011438
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618011435}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2a6b7a640c20ff4292dc643b65628d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1634274514
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,7 +2655,8 @@ MonoBehaviour:
   evelynActorPausePoint: {fileID: 1674638715}
   jamesActorPausePoint: {fileID: 1103464368}
   actorEndPoint: {fileID: 1746477412}
-  travelSpeed: 10
+  travelSpeed: 9
+  gameSceneName: Jordi
 --- !u!1 &2062552044
 GameObject:
   m_ObjectHideFlags: 0
