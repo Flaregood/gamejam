@@ -15,10 +15,15 @@ MonoBehaviour:
   ability: {fileID: 11400000, guid: c4bdb8a4140e168479405cc917c4e7bb, type: 2}
   enemySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   health: 100
-  speed: 4
-  followRadius: 10
-  attackRadius: 4
+  speed: 0
+  followRadius: 4
+  attackRadius: 10
   attackCooldown: 0.75
   attackTime: 0.5
+  IdleAnim: 
+  MoveAnim: 
+  AttackAnim: 
+  DieAnim: 
+  HurtAnim: 
   size: {x: 1, y: 1}
   SpriteColor: {r: 0, g: 0.6384635, b: 1, a: 1}

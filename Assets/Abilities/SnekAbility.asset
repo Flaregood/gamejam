@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a9fa770c11492458b86151bb9106c0, type: 3}
+  m_Name: SnekAbility
+  m_EditorClassIdentifier: 
+  name: yes
+  cooldownTime: 0
+  activeTime: 2
+  activeProjectileTime: 2
+  icon: {fileID: 21300000, guid: 543880305e1662a4b845bc049d72a0ef, type: 3}
+  projectile: {fileID: 4242213785938702123, guid: 53036e4fe4a64434cbe2ffa8f033d067, type: 3}
+  distanceSpeed: 6
+  damage: 2

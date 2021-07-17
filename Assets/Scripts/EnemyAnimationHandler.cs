@@ -38,12 +38,12 @@ public class EnemyAnimationHandler : MonoBehaviour
 		}
         if(LastPosition.x - transform.position.x > 0 && FacingRight)
 		{
-            Flip();
+            //Flip();
             ChangeAnimationState(Move);
 		}
         if(transform.position.x - LastPosition.x < 0 && FacingRight == false)
 		{
-            Flip();
+            //Flip();
             ChangeAnimationState(Move);
 		}
 		else if (transform.position.x - LastPosition.x != 0)
