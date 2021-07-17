@@ -26,7 +26,10 @@ public class Projectile : MonoBehaviour
         if (activeTime <= 0)
         {
             if (spriteRenderer == null)
+            {
                 Destroy(gameObject);
+                return;
+            }
 
             Color color = spriteRenderer.color;
             color = new Color(color.r, color.g, color.b, color.a - Time.deltaTime * 2);
