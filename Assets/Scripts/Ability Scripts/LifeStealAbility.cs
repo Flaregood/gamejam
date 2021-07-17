@@ -5,15 +5,22 @@ using UnityEngine;
 [CreateAssetMenu]
 public class LifeStealAbility : Ability
 {
-    [SerializeField] private GameObject forcefield;
-    [SerializeField] private int shieldHealth;
+    [SerializeField] private GameObject lifeSteal;
+    [SerializeField] private GameObject lifeStealParticlePrefab;
+    [SerializeField] private int damage;
+    [SerializeField] private int distanceSpeed;
+    [SerializeField] private float damageTick;
 
     public override void Activate(GameObject parent)
     {
-        GameObject lifeStealCircle = Instantiate(original: forcefield, parent: parent.transform);
+        GameObject lifeStealCircle = Instantiate(original: lifeSteal, parent: parent.transform);
 
-        lifeStealCircle.GetComponent<ShieldController>().activeTime = activeTime;
-        lifeStealCircle.GetComponent<ShieldController>().shieldHealth = shieldHealth;
+        lifeStealCircle.GetComponent<LifeStealController>().lifeStealParticlePrefab = lifeStealParticlePrefab;
+        lifeStealCircle.GetComponent<LifeStealController>().attackerTag = parent.tag;
+        lifeStealCircle.GetComponent<LifeStealController>().activeTime = activeTime;
+        lifeStealCircle.GetComponent<LifeStealController>().damage = damage;
+        lifeStealCircle.GetComponent<LifeStealController>().damageTick = damageTick;
+        lifeStealCircle.GetComponent<LifeStealController>().distanceSpeed = distanceSpeed;
     }
 
     public override void BeginCooldown(GameObject parent)

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f4cff32dbf6004eb7e2a843423f455, type: 3}
+  m_Name: Life Steal
+  m_EditorClassIdentifier: 
+  name: 
+  cooldownTime: 5
+  activeTime: 15
+  activeProjectileTime: 0
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  lifeSteal: {fileID: 1657136538588647266, guid: 6e5eae1431e30084ba44a7810eae7035, type: 3}
+  lifeStealParticlePrefab: {fileID: 6292464384549387305, guid: b12bbe252f6a28740a6092d2e998b269, type: 3}
+  damage: 15
+  distanceSpeed: 1
+  damageTick: 1
