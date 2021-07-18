@@ -1277,7 +1277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6380630465206929204, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.02
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 6380630465206929204, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1365,11 +1365,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380630465215778809, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.05
+      value: 16.36
       objectReference: {fileID: 0}
     - target: {fileID: 6380630465215778809, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.45
+      value: 16.36
       objectReference: {fileID: 0}
     - target: {fileID: 6380630465215778810, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_Name
@@ -1379,8 +1379,7 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 599428941}
-    m_RemovedComponents:
-    - {fileID: 6380630465215778809, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
 --- !u!1 &777598543
 GameObject:
@@ -2240,22 +2239,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6380630465215778810, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
   m_PrefabInstance: {fileID: 715338362}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &1852255095
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852255086}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.29542673, y: -0.6332929}
-  m_Size: {x: 1.6319511, y: 1.6319511}
-  m_Direction: 0
 --- !u!1 &1894370261
 GameObject:
   m_ObjectHideFlags: 0
