@@ -7,20 +7,32 @@ public class ShieldController : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    [SerializeField] private Vector3 offset;
+
     public int shieldHealth;
     public float activeTime;
 
     private Transform player;
 
+    private PlayerAnimations playerAnimations;
+
     private void Start()
     {
         player = PlayerController.instance.transform;
         healthBar.SetMaxHealth(shieldHealth);
+        playerAnimations = player.GetComponent<PlayerAnimations>();
     }
 
     void Update()
     {
-        Vector2 targetPos = Vector2.Lerp(transform.position, player.position, 20 * Time.fixedDeltaTime);
+        Vector3 adjustedOffset; 
+        if (playerAnimations.FacingRight){
+            adjustedOffset = transform.position + offset;
+        } else {
+             adjustedOffset = transform.position - offset;
+        }
+        
+        Vector2 targetPos = Vector2.Lerp(adjustedOffset, player.position, 20 * Time.fixedDeltaTime);
 
         transform.position = new Vector3(targetPos.x, targetPos.y, transform.position.z);
 
