@@ -557,6 +557,7 @@ RectTransform:
   - {fileID: 452887374}
   - {fileID: 1586050998}
   - {fileID: 651308736}
+  - {fileID: 1165640144}
   m_Father: {fileID: 1126666096}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1282,7 +1283,6 @@ RectTransform:
   m_Children:
   - {fileID: 159628983}
   - {fileID: 1314974856}
-  - {fileID: 1165640144}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1318,12 +1318,12 @@ RectTransform:
   m_GameObject: {fileID: 1165640143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 507.12573, y: 323.85364, z: 323.85364}
+  m_LocalScale: {x: 507.1257, y: 323.85364, z: 323.85364}
   m_Children:
   - {fileID: 18789281}
   - {fileID: 1060725861}
-  m_Father: {fileID: 1126666096}
-  m_RootOrder: 2
+  m_Father: {fileID: 159628983}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2116,13 +2116,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1852255087, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: palyerObj
+      value: 
+      objectReference: {fileID: 2022873903}
+    - target: {fileID: 1852255088, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2022873904, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: Speed
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2022873904, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6276065546858841037, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: dialogUI
@@ -2159,7 +2167,7 @@ PrefabInstance:
     - target: {fileID: 6380630465215778804, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: ability
       value: 
-      objectReference: {fileID: 11400000, guid: 6971a7822bf6df34ab47b037a02ceda0, type: 2}
+      objectReference: {fileID: 11400000, guid: 7f967ca3b301c6e4eb41d869047176bb, type: 2}
     - target: {fileID: 6380630465215778804, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: abilityIndicator
       value: 
@@ -2237,6 +2245,10 @@ PrefabInstance:
       value: 1.0952829
       objectReference: {fileID: 0}
     - target: {fileID: 6380630465215778809, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380630465215778809, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: m_Offset.x
       value: -0.06446111
       objectReference: {fileID: 0}
@@ -2260,7 +2272,32 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1165640145}
-    m_RemovedComponents: []
+    - target: {fileID: 8472309455161638822, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: dialogUI
+      value: 
+      objectReference: {fileID: 1314974855}
+    - target: {fileID: 8472309455161638822, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: abilityUI
+      value: 
+      objectReference: {fileID: 159628982}
+    - target: {fileID: 8472309455161638822, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 1821954185}
+    - target: {fileID: 8472309455161638822, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: profileImage
+      value: 
+      objectReference: {fileID: 141061726}
+    - target: {fileID: 8472309455161638822, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: speakerNameText
+      value: 
+      objectReference: {fileID: 660180575}
+    - target: {fileID: 8472309455161638822, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: profileImageBackground
+      value: 
+      objectReference: {fileID: 1468265959}
+    m_RemovedComponents:
+    - {fileID: 1099897382, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
 --- !u!1 &1729252933
 GameObject:

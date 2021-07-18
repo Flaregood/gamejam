@@ -182,8 +182,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d481f2f281a1c07408e93f07062f4af1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: 20a0fb4c7c5a2f44f89cb0bcde26350f, type: 2}
   abilityIndicator: {fileID: 0}
   cooldownIndicator: {fileID: 0}
@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0bd222851e4cf247a31c6a4c7f4a40a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 719ae404d85535a4d98978da2ca6295d, type: 2}
   weaponIndicator: {fileID: 0}
   firePoint: {fileID: 6380630465206929205}
@@ -212,8 +212,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a3059338dea54c4d819e35a67847af7, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1099897390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96d5f910d53b44c4aae58988eec1e096, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8355914452906232934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,8 +236,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d383a1fc7943ac488e16e84b21d17aa, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   deathDialogs:
   - {fileID: 11400000, guid: 1a8e23df2681dc544bff78e87fd4c0b8, type: 2}
@@ -259,8 +259,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f41b9a73bcbc9459f3df003acdd24e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Speed: 200
   Health: 10
 --- !u!95 &1852255088
@@ -278,7 +278,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -292,8 +292,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97f41b9a73bcbc9459f3df003acdd24e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Speed: 10
   Health: 100
 --- !u!1001 &980831393033620953
@@ -305,14 +305,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3576644355466775523, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3576644355466775523, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3576644355466775523, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
-      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3576644355466775523, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
@@ -357,27 +349,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8651182316536050303, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: dialogUI
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8651182316536050303, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: abilityUI
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8651182316536050303, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: dialogText
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8651182316536050303, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: profileImage
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8651182316536050303, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: speakerNameText
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8651182316536050303, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: profileImageBackground
-      value:
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8938628845809607446, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
       propertyPath: m_Name
@@ -385,8 +377,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
---- !u!4 &2212665105233197649 stripped
+--- !u!4 &4341003727223834170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3576644355466775523, guid: bd0d62f17cb2f0541b7689aaf7199324, type: 3}
-  m_PrefabInstance: {fileID: 3392965510757052850}
+  m_PrefabInstance: {fileID: 980831393033620953}
   m_PrefabAsset: {fileID: 0}
+{"mode":"full","isActive":false}

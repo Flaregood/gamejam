@@ -9,7 +9,7 @@ public class PlayerAnimations : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private string CurrentState;
-    private bool FacingRight;
+    public bool FacingRight;
     [SerializeField] private int Health;
     private bool Attacking;
 
@@ -21,8 +21,10 @@ public class PlayerAnimations : MonoBehaviour
 	#endregion Animations
 	void Start()
     {
+        // rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        rb.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         FacingRight = true;
     }
 

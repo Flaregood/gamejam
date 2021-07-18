@@ -561,5 +561,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 3427065121489831554}
   spriteRenderer: {fileID: 1289819863315422990}
+  offset: {x: 1, y: 0, z: 0}
   shieldHealth: 0
   activeTime: 0
