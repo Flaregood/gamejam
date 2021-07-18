@@ -16,5 +16,5 @@ MonoBehaviour:
   cooldownTime: 0
   activeTime: 2
   activeProjectileTime: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 62bdfb5621fbfc142b08d4d60549c576, type: 3}
   shrinkFactor: 0.05

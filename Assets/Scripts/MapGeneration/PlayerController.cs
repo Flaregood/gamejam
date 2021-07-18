@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Dialog[] deathDialogs;
     [SerializeField] private Dialog[] responseDialogs;
     private DialogController dialogController;
-    
+
     [SerializeField] public int health;
     private int maxHealth;
 
@@ -56,8 +56,11 @@ public class PlayerController : MonoBehaviour
 
             DisablePlayer();
             GetComponent<PlayerAnimations>().Die();
-            //! Freeze input or coroutine will get interupted by attack/movement script ⚠
             DeathDialog();
+            StartCoroutine(RestartScene());
+
+
+
         }
         else if (health > maxHealth)
         {
@@ -70,15 +73,23 @@ public class PlayerController : MonoBehaviour
         Dialog randomDialog = deathDialogs[Random.Range(0, deathDialogs.Length)];
         Dialog randomResponse = responseDialogs[Random.Range(0, responseDialogs.Length)];
 
-        StartCoroutine(dialogController.StartDialog(randomDialog,dialogController.StartDialog(randomResponse)));
+        StartCoroutine(dialogController.StartDialog(randomDialog, dialogController.StartDialog(randomResponse)));
     }
 
-    void DisablePlayer(){
+    void DisablePlayer()
+    {
         this.enabled = false;
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
         gameObject.GetComponent<Rigidbody2D>().simulated = false;
         gameObject.GetComponent<AbilityHandler>().enabled = false;
         gameObject.GetComponent<WeaponHandler>().enabled = false;
         gameObject.GetComponent<PlayerAnimations>().enabled = false;
+    }
+
+    IEnumerator RestartScene()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("MainGame");
+
     }
 }
