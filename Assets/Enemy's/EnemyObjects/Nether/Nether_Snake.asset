@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5f5913b0021f49498e0c37864c84a9b, type: 3}
-  m_Name: Square
+  m_Name: Nether_Snake
   m_EditorClassIdentifier: 
   ability: {fileID: 11400000, guid: c4bdb8a4140e168479405cc917c4e7bb, type: 2}
   enemySprite: {fileID: 21300000, guid: 846aadd1bb6d1694595cb742e5c2d5e4, type: 3}
@@ -20,4 +20,10 @@ MonoBehaviour:
   attackRadius: 4
   attackCooldown: 0.75
   attackTime: 0.5
+  IdleAnim: AttackAnimEnemy3
+  MoveAnim: AttackAnimEnemy3
+  AttackAnim: AttackAnimEnemy3
+  DieAnim: DieAnimEnemy3
+  HurtAnim: HurtAnimEnemy3
+  size: {x: 1, y: 1}
   SpriteColor: {r: 1, g: 0.73514766, b: 0.2783019, a: 1}

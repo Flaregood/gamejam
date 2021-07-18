@@ -2117,6 +2117,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1852255087, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: Health
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1852255087, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: palyerObj
       value: 
       objectReference: {fileID: 2022873903}
@@ -2269,6 +2273,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8355914452906232934, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
+      propertyPath: health
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8355914452906232934, guid: 378a4531ccf369b4ab64f46a72cb8e90, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1165640145}
@@ -2379,10 +2387,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 31dd5605c70c30e4fbf8e3c058f42e13, type: 2}
     - {fileID: 11400000, guid: 5fe9364104d426d4ab25c310df35f8ea, type: 2}
     - {fileID: 11400000, guid: b2d1f8d65de8b494fb6720a77de467d1, type: 2}
-    - {fileID: 11400000, guid: ab4d7ae20417e5640a1a3918a1cc7fa7, type: 2}
   - Enemys:
     - {fileID: 11400000, guid: 207d5020dcb2a1440aebfb61f3e722c5, type: 2}
-    - {fileID: 11400000, guid: c794d808c3f685f4b93d00952e5bdace, type: 2}
+    - {fileID: 11400000, guid: 5fe9364104d426d4ab25c310df35f8ea, type: 2}
   - Enemys:
     - {fileID: 11400000, guid: 863aba2791d4c9643972a63ef4d98986, type: 2}
     - {fileID: 11400000, guid: d20de8f5a29f5444984ef3d0541c6be7, type: 2}
