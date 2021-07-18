@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 236e85bead113544485042cb371b686c, type: 3}
   m_Name: Shoot Magic Ball
   m_EditorClassIdentifier: 
-  name: 
+  name: Magic Ball
   cooldownTime: 0
   activeTime: 0
   activeProjectileTime: 2
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 0f6a734d2a0ebdb44b755c5ba03c1a14, type: 3}
   projectile: {fileID: 4242213785938702123, guid: 53036e4fe4a64434cbe2ffa8f033d067, type: 3}
   movingSpeed: 15
-  distanceSpeed: 100
-  spinSpeed: 500
+  distanceSpeed: 10
+  spinSpeed: 50
   amountProjectiles: 8
   damage: 15
