@@ -6,10 +6,10 @@ public class EnemyAnimationHandler : MonoBehaviour
 {
     private Vector2 LastPosition;
     private Animator anim;
-    private string CurrentState;
+    [SerializeField] private string CurrentState;
     private bool FacingRight;
     private bool Attacking;
-    private EnemyStats ScriptableObject;
+    [SerializeField] private EnemyStats ScriptableObject;
     private SpriteRenderer SR;
     private string Idle;
     private string Move;
@@ -47,13 +47,14 @@ public class EnemyAnimationHandler : MonoBehaviour
 		{
             Flip();
             ChangeAnimationState(Move);
-            Debug.Log("Flip1");
+            // Debug.Log("Current Anim: " + CurrentState);
 		}
         if(transform.position.x - Player.position.x > 0 && FacingRight == true && Moving == true && DieBool == false)
 		{
             Flip();
             ChangeAnimationState(Move);
-            Debug.Log("Flip2");
+            // Debug.Log("Current Anim: " + CurrentState);
+
 		}
         if (Attacking == true && DieBool == false)
         {
@@ -71,7 +72,11 @@ public class EnemyAnimationHandler : MonoBehaviour
 	}
 	public void ChangeAnimationState(string NewState)
     {
-        if (CurrentState == NewState) return;
+        if (CurrentState == NewState) {
+            Debug.Log("REPEATING ANIM!: c:" + CurrentState + "n: " + NewState );
+            return;
+            }
+            
         anim.Play(NewState);
         CurrentState = NewState;
     }
