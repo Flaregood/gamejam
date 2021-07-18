@@ -22,6 +22,5 @@ public class EnemyStats : ScriptableObject
     public string DieAnim;
     public string HurtAnim;
     public Vector2 size = new Vector2(1,1);
-
     public Color SpriteColor;
 }
