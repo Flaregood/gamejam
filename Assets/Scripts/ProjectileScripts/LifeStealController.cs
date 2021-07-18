@@ -66,7 +66,7 @@ public class LifeStealController : MonoBehaviour
             if (collision.gameObject.tag == "Enemy")
             {
                 enemys.Add(collision.gameObject);
-                AdLifeStealParticles(collision.transform);
+                //AdLifeStealParticles(collision.transform); //Use this function if particles should fly from the enemy to the player
             }
         }
         else
@@ -74,7 +74,7 @@ public class LifeStealController : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 enemys.Add(collision.gameObject);
-                AdLifeStealParticles(collision.transform);
+                //AdLifeStealParticles(collision.transform); //Use this function if particles should fly from the player to the enemy
             }
         }
     }    

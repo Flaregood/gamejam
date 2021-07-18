@@ -10,7 +10,6 @@ public class PlayerAnimations : MonoBehaviour
     private Animator anim;
     private string CurrentState;
     public bool FacingRight;
-    [SerializeField] private int Health;
     private bool Attacking;
 
     #region Animations

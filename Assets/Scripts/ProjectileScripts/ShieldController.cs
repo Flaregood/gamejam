@@ -23,7 +23,7 @@ public class ShieldController : MonoBehaviour
         playerAnimations = player.GetComponent<PlayerAnimations>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 adjustedOffset; 
         if (playerAnimations.FacingRight){
@@ -43,6 +43,12 @@ public class ShieldController : MonoBehaviour
 
         if (activeTime <= 0)
         {
+            if (spriteRenderer == null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             Color color = spriteRenderer.color;
             color = new Color(color.r, color.g, color.b, color.a - Time.deltaTime * 2);
             spriteRenderer.color = color;

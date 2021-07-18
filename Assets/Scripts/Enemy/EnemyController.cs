@@ -82,7 +82,6 @@ public class EnemyController : MonoBehaviour
     public IEnumerator Attack()
     {
         isAttacking = true;
-        GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(attackTime);
 
         ability.Activate(gameObject);
@@ -91,7 +90,6 @@ public class EnemyController : MonoBehaviour
         //Longrange = shoot at position the player is on at the moment he fires
 
         isAttacking = false;
-        GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     public void FollowPlayer()
