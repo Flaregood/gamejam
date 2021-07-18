@@ -16,6 +16,6 @@ MonoBehaviour:
   cooldownTime: 5
   activeTime: 10
   activeProjectileTime: 0
-  icon: {fileID: 21300000, guid: fcacac0bc5a334d4682a5eed70f400a9, type: 3}
-  forcefield: {fileID: 1453288389961097319, guid: 2e6d074618560ef4e804d911509c230f, type: 3}
+  icon: {fileID: 21300000, guid: 2d308a37cbbe06a46a4f32e627865441, type: 3}
+  forcefield: {fileID: 1453288389961097319, guid: 023017a42fe3c304999e469dbbe16813, type: 3}
   shieldHealth: 100
