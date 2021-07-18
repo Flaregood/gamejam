@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackerTag: 
-  activeTime: 0
-  damage: 1000
-  distanceSpeed: 20
+  activeTime: 2
+  damage: 10
+  distanceSpeed: 50
   spinningSpeed: 200
   centerPoint: {x: 0, y: 0}
 --- !u!61 &1829406864581201855
