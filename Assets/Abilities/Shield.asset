@@ -11,11 +11,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbf8087dcab79cd43a7f37916d8c5d26, type: 3}
   m_Name: Shield
-  m_EditorClassIdentifier:
-  name:
+  m_EditorClassIdentifier: 
+  name: 
   cooldownTime: 5
   activeTime: 10
   activeProjectileTime: 0
-  icon: {fileID: 21300000, guid: 846aadd1bb6d1694595cb742e5c2d5e4, type: 3}
+  icon: {fileID: 21300000, guid: 3277172ec3a8dc0468f1b18172b5a373, type: 3}
   shield: {fileID: 3427065123040112553, guid: 73b79d4ee708705418db53b97bfd0a23, type: 3}
   shieldHealth: 100

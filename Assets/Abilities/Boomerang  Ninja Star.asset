@@ -11,12 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d54adbdc9591a504db0b13ff410221c1, type: 3}
   m_Name: Boomerang  Ninja Star
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   name: Blades
-  cooldownTime: 30
+  cooldownTime: 10
   activeTime: 0
   activeProjectileTime: 5
-  icon: {fileID: 21300000, guid: 9d973bb75cbfc6f4d830ab9b7c26396d, type: 3}
+  icon: {fileID: 21300000, guid: ba3b27ce36b08fb43ba078215e984f15, type: 3}
   projectile: {fileID: 4242213785938702123, guid: e1394d2e6bc41a44590fabcfdbdd5e68, type: 3}
   distanceSpeed: 10
   spinSpeed: 1

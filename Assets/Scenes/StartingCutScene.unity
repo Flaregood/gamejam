@@ -1897,6 +1897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 200
+  FacingRight: 0
   Health: 10
 --- !u!1 &1414320567
 GameObject:
@@ -2656,7 +2657,7 @@ MonoBehaviour:
   jamesActorPausePoint: {fileID: 1103464368}
   actorEndPoint: {fileID: 1746477412}
   travelSpeed: 9
-  gameSceneName: Jordi
+  gameSceneName: MainGame
 --- !u!1 &2062552044
 GameObject:
   m_ObjectHideFlags: 0
