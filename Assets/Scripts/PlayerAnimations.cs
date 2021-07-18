@@ -14,11 +14,10 @@ public class PlayerAnimations : MonoBehaviour
     private bool Attacking;
 
     #region Animations
-    const string NormalAttackAnim = "NormalAttack_Player";
-    const string MoveAnim = "Move_Player";
-    const string IdleAnim = "Idle_Player";
-    const string HurtAnim = "Hurt_Player";
-    const string DieAnim = "Die_Player";
+    const string NormalAttackAnim = "Evelyn Attack";
+    const string MoveAnim = "Evelyn Run";
+    const string IdleAnim = "Idle Evelyn";
+    const string DieAnim = "Evelyn Die";
 	#endregion Animations
 	void Start()
     {
@@ -37,6 +36,19 @@ public class PlayerAnimations : MonoBehaviour
         {
             Attacking = true;
         }
+
+        if (Attacking == true)
+		{
+            ChangeAnimationState(NormalAttackAnim);
+		}
+        if (Movement != new Vector2(0,0) && Attacking == false)
+		{
+            ChangeAnimationState(MoveAnim);
+		}
+        if (Movement == new Vector2(0, 0) && Attacking == false)
+		{
+            ChangeAnimationState(IdleAnim);
+		}
         if (FacingRight == true && Movement.x < 0)
         {
             Flip();
@@ -45,26 +57,8 @@ public class PlayerAnimations : MonoBehaviour
         {
             Flip();
         }
-        if (Attacking == true)
-        {
-            //call function to shoot from FEMI`s script
-            ChangeAnimationState(NormalAttackAnim);
-        }
-        else if (Movement != new Vector2(0,0) && Attacking == false)
-		{
-            ChangeAnimationState(MoveAnim);
-		}
-        else if (Movement == new Vector2(0, 0))
-		{
-            ChangeAnimationState(IdleAnim);
-		}
 
-        else if (Attacking == true)
-		{
-            ChangeAnimationState(NormalAttackAnim);
-		}
 
-        
 
     }
     public void Flip()
@@ -75,16 +69,19 @@ public class PlayerAnimations : MonoBehaviour
 
     public void Die()
 	{
-        // ChangeAnimationState(DieAnim);
+        ChangeAnimationState(DieAnim);
 	}
 
 
 
     public void ChangeAnimationState(string NewState)
     {
-        // if (CurrentState == NewState) return;
-        // anim.Play(NewState);
-        // CurrentState = NewState;
+        if (CurrentState == NewState) return;
+        anim.Play(NewState);
+        CurrentState = NewState;
     }
-
+    public void AnimationEnd()
+    {
+        Attacking = false;
+    }
 }

@@ -20,5 +20,10 @@ MonoBehaviour:
   attackRadius: 4
   attackCooldown: 0.75
   attackTime: 0.5
+  IdleAnim: IdleAnimEnemy2
+  MoveAnim: WalkAnimEnemy2
+  AttackAnim: AttackAnimEnemy2
+  DieAnim: DieAnimEnemy2
+  HurtAnim: HurtAnimEnemy2
   size: {x: 1, y: 1}
   SpriteColor: {r: 0, g: 0.6792453, b: 0.060944322, a: 1}

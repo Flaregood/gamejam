@@ -10,16 +10,21 @@ public class EnemyAnimationHandler : MonoBehaviour
     private bool FacingRight;
     private bool Attacking;
     private EnemyStats ScriptableObject;
+    private SpriteRenderer SR;
     private string Idle;
     private string Move;
     private string Attack;
     private string Die;
     private string Hurt;
+    private Transform Player;
+    private bool Moving;
+    private bool DieBool;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
         ScriptableObject = GetComponent<EnemyController>().stats;
+        anim = GetComponent<Animator>();
+        SR = GetComponent<SpriteRenderer>();
 
         Move = ScriptableObject.MoveAnim;
         Idle = ScriptableObject.IdleAnim;
@@ -30,33 +35,33 @@ public class EnemyAnimationHandler : MonoBehaviour
     }
 	private void FixedUpdate()
 	{
+        Moving = GetComponent<EnemyController>().Moving;
+        Player = GameObject.Find("Player").GetComponent<Transform>();
         Attacking = GetComponent<EnemyController>().isAttacking;
         
-        if(transform.position.x - LastPosition.x == 0 && Attacking == false)
+        if(Moving == false && Attacking == false && DieBool == false)
 		{
             ChangeAnimationState(Idle);
 		}
-        if(LastPosition.x - transform.position.x > 0 && FacingRight)
+        if(transform.position.x - Player.position.x < 0 && FacingRight == false && Moving == true && DieBool == false)
 		{
-            //Flip();
+            Flip();
             ChangeAnimationState(Move);
+            Debug.Log("Flip1");
 		}
-        if(transform.position.x - LastPosition.x < 0 && FacingRight == false)
+        if(transform.position.x - Player.position.x > 0 && FacingRight == true && Moving == true && DieBool == false)
 		{
-            //Flip();
+            Flip();
             ChangeAnimationState(Move);
+            Debug.Log("Flip2");
 		}
-		else if (transform.position.x - LastPosition.x != 0)
-		{
-
-		}
-        if (transform.position.x - LastPosition.x == 0 && Attacking == true)
+        if (Attacking == true && DieBool == false)
         {
             ChangeAnimationState(Attack);
         }
 
 
-        LastPosition = transform.position;
+
 
 
 	}
@@ -73,11 +78,13 @@ public class EnemyAnimationHandler : MonoBehaviour
     public void Flip()
     {
         FacingRight = !FacingRight;
-        transform.eulerAngles = transform.eulerAngles + new Vector3(0, 180, 0);
+        SR.flipX = !SR.flipX;
+
     }
     public void EnemyDie()
 	{
         ChangeAnimationState(Die);
+        DieBool = true;
 	}
     public void EnemyHurt()
 	{
