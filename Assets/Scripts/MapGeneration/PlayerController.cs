@@ -79,5 +79,6 @@ public class PlayerController : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().simulated = false;
         gameObject.GetComponent<AbilityHandler>().enabled = false;
         gameObject.GetComponent<WeaponHandler>().enabled = false;
+        gameObject.GetComponent<PlayerAnimations>().enabled = false;
     }
 }

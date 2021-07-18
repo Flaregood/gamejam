@@ -16,6 +16,7 @@ public class ShootMagicBallAbility : Ability
     {
         GameObject magicBallHolder = new GameObject();
         magicBallHolder.transform.position = parent.transform.position;
+        //ProjectileParentMovement PPM = magicBallHolder.AddComponent(typeof(ProjectileParentMovement)) as ProjectileParentMovement;
         ProjectileParentMovement PPM = magicBallHolder.AddComponent(typeof(ProjectileParentMovement)) as ProjectileParentMovement;
         PPM.distanceSpeed = movingSpeed;
 

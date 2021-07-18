@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f5913b0021f49498e0c37864c84a9b, type: 3}
   m_Name: Tiny Slime
   m_EditorClassIdentifier: 
-  ability: {fileID: 11400000, guid: c9177bfead94552469166115373fc832, type: 2}
+  ability: {fileID: 11400000, guid: d4c2ca767c3819e44b4cd7c3b0b75e51, type: 2}
   enemySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   health: 100
   speed: 4
   followRadius: 10
-  attackRadius: 4
+  attackRadius: 1
   attackCooldown: 0.5
   attackTime: 0.5
   IdleAnim: IdleAnimEnemy2
@@ -25,5 +25,5 @@ MonoBehaviour:
   AttackAnim: AttackAnimEnemy2
   DieAnim: DieAnimEnemy2
   HurtAnim: HurtAnimEnemy2
-  size: {x: 0.3, y: 0.3}
+  size: {x: 1, y: 1}
   SpriteColor: {r: 0, g: 0.6792453, b: 0.060944322, a: 1}

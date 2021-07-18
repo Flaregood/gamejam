@@ -6,7 +6,7 @@ public class ParticleToTarget : MonoBehaviour
 {
 	public Transform Target;
 
-	private ParticleSystem system;
+	public ParticleSystem system;
 
 	private static ParticleSystem.Particle[] particles = new ParticleSystem.Particle[1000];
 
