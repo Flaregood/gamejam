@@ -3044,8 +3044,36 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Exorianer\nFEMI\nJvdlem\nSara Honey\nMax\n\n\nMoltuen\nMilou Martin\nScout\nPaintedWings\n\n
-    \nNils\n\n\nFlare\n"
+  m_text: 'Exorianer
+
+    FEMI
+
+    Jvdlem
+
+    Sara Honey
+
+    Max
+
+
+
+    Moltuen
+
+    Milou
+    Martin
+
+    Scout
+
+    PaintedWings
+
+
+
+    Nils
+
+
+
+    Flare
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
