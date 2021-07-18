@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
 
     private float attackCooldown; //Minimum time between two attacks
     private float startAttackCooldown;
+    public bool Moving;
 
     private bool encounteredPlayer = false; //Was the player ever near enough for the enemy to follow him
     public bool isAttacking = false; //Is the enemy currently attacking
@@ -72,9 +73,9 @@ public class EnemyController : MonoBehaviour
         if (health <= 0)
         {
             //TODO: Play death animation in here
-            // GetComponent<EnemyAnimationHandler>().EnemyDie();
+            GetComponent<EnemyAnimationHandler>().EnemyDie();
             gameObject.GetComponent<Collider2D>().enabled = false;
-            Destroy(gameObject, 2);
+            Destroy(gameObject,0.8f);
         }
     }
 
@@ -96,5 +97,6 @@ public class EnemyController : MonoBehaviour
     public void FollowPlayer()
     {
         transform.Translate((PlayerController.instance.transform.position - transform.position).normalized * speed * Time.fixedDeltaTime);
+        Moving = true;
     }
 }
